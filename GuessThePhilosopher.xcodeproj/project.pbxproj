@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95216EC125635AE100990CD1 /* quizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95216EC025635AE100990CD1 /* quizBrain.swift */; };
+		95216EC125635AE100990CD1 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95216EC025635AE100990CD1 /* QuizBrain.swift */; };
 		95216EC425637D3300990CD1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 95216EC325637D3300990CD1 /* README.md */; };
 		95294B31255D59C90007F007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95294B30255D59C90007F007 /* AppDelegate.swift */; };
 		95294B33255D59C90007F007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95294B32255D59C90007F007 /* SceneDelegate.swift */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		95216EC025635AE100990CD1 /* quizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizBrain.swift; sourceTree = "<group>"; };
+		95216EC025635AE100990CD1 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		95216EC325637D3300990CD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95294B2D255D59C90007F007 /* GuessThePhilosopher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessThePhilosopher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95294B30255D59C90007F007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		951F9737255E4A6D005B6C62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				95216EC025635AE100990CD1 /* quizBrain.swift */,
+				95216EC025635AE100990CD1 /* QuizBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95294B35255D59C90007F007 /* StartViewController.swift in Sources */,
-				95216EC125635AE100990CD1 /* quizBrain.swift in Sources */,
+				95216EC125635AE100990CD1 /* QuizBrain.swift in Sources */,
 				952A0D71255E896400AE432A /* UIViewExtensions.swift in Sources */,
 				95294B31255D59C90007F007 /* AppDelegate.swift in Sources */,
 				95294B33255D59C90007F007 /* SceneDelegate.swift in Sources */,

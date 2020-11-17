@@ -207,9 +207,10 @@
                                     <constraint firstItem="Ena-yv-4UP" firstAttribute="width" secondItem="IfP-Od-XKR" secondAttribute="width" id="x1u-Iy-2ha"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7a-nC-4ir">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7a-nC-4ir">
                                 <rect key="frame" x="0.0" y="896" width="414" height="240"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="hAZ-TO-Wia"/>
                                 </constraints>
@@ -254,9 +255,14 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="f7a-nC-4ir" id="EvZ-xU-t24"/>
+                        <outlet property="bottomViewTopConstraint" destination="nmZ-UB-bBN" id="7oj-tT-qJH"/>
+                        <outlet property="checkButton" destination="ct6-sp-9LY" id="iOj-Vo-7Mj"/>
+                        <outlet property="leftAuthorText" destination="SvD-vs-9bn" id="2TQ-Q0-LU9"/>
                         <outlet property="leftButton" destination="ID6-i9-Gnh" id="x0u-eM-qpM"/>
                         <outlet property="progressView" destination="SBS-9G-wGa" id="4Hs-k8-G7s"/>
+                        <outlet property="quoteText" destination="yXv-qd-Qqm" id="Z3X-J6-6eK"/>
                         <outlet property="resetButton" destination="CGb-Fj-54w" id="RKU-wN-LKv"/>
+                        <outlet property="rightAuthorText" destination="jP8-TU-dGs" id="WlN-gp-qKb"/>
                         <outlet property="rightButton" destination="3CV-c4-Ga9" id="twn-Ue-8a8"/>
                     </connections>
                 </viewController>
@@ -282,6 +288,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

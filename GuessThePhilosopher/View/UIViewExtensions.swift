@@ -17,3 +17,21 @@ extension UIView {
         shadowMe()
     }
 }
+
+
+// Animate bottom card
+extension UIView{
+    func bottomCardShow(){
+        UIView.animate(withDuration: 0.2) {
+            self.center.y -= self.bounds.height
+        }
+    }
+    func bottomCardHide(){
+        UIView.animate(withDuration: 0.2) {
+            self.backgroundColor = UIColor.clear
+        } completion: { (complete: Bool) in
+            self.center.y += self.bounds.height
+            self.backgroundColor = UIColor.white
+        }
+    }
+}

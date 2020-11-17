@@ -10,29 +10,19 @@ import UIKit
 class QuizViewController: UIViewController {
     var quizBrain = QuizBrain()
     
-    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
+    
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomViewTopConstraint: NSLayoutConstraint!
     
-    @IBAction func resetButtonPressed(_ sender: UIButton) {
-        print("BUTTON PRESSSED")
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func checkButtonPressed(_ sender: UIButton) {
-        switch quizBrain.currentStatus {
-        case QuizStatus.waiting:
-            bottomView.animShow()
-            quizBrain.currentStatus = QuizStatus.correct
-        case QuizStatus.correct:
-            bottomView.animHide()
-            quizBrain.currentStatus = QuizStatus.waiting
-        case QuizStatus.wrong:
-            bottomView.animHide()
-        }
-    }
+    @IBOutlet weak var quoteText: UILabel!
+    @IBOutlet weak var leftAuthorText: UILabel!
+    @IBOutlet weak var rightAuthorText: UILabel!
     
     override func viewDidLoad() {
         
@@ -42,22 +32,37 @@ class QuizViewController: UIViewController {
         resetButton.shadowMe()
         leftButton.borderAndShadowMe()
         rightButton.borderAndShadowMe()
+        
+        let question = quizBrain.question
+        quoteText.text = question.quoteText
+        leftAuthorText.text = question.author1
+        rightAuthorText.text = question.author2
     }
     
+    
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
+        print("BUTTON PRESSSED")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func checkButtonPressed(_ sender: UIButton) {
+        
+        if sender.titleLabel?.text == "CHECK" {
+            UIView.animate(withDuration: 0.2) {
+                self.bottomViewTopConstraint.constant -= self.bottomView.bounds.height
+                sender.setTitle("CONTINUE", for: .normal)
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            UIView.animate(withDuration: 0.2) {
+                self.bottomView.backgroundColor = UIColor.clear
+                sender.setTitle("CHECK", for: .normal)
+            } completion: { (complete: Bool) in
+                self.bottomViewTopConstraint.constant += self.bottomView.bounds.height
+                self.bottomView.backgroundColor = UIColor.red
+            }
+        }
+    }
 }
 
-extension UIView{
-    func animShow(){
-        UIView.animate(withDuration: 0.2) {
-            self.center.y -= self.bounds.height
-        }
-    }
-    func animHide(){
-        UIView.animate(withDuration: 0.2) {
-            self.backgroundColor = UIColor.clear
-        } completion: { (complete: Bool) in
-            self.center.y += self.bounds.height
-            self.backgroundColor = UIColor.white
-        }
-    }
-}
+
