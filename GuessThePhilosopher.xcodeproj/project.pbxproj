@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95216EC125635AE100990CD1 /* quizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95216EC025635AE100990CD1 /* quizBrain.swift */; };
+		95216EC425637D3300990CD1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 95216EC325637D3300990CD1 /* README.md */; };
 		95294B31255D59C90007F007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95294B30255D59C90007F007 /* AppDelegate.swift */; };
 		95294B33255D59C90007F007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95294B32255D59C90007F007 /* SceneDelegate.swift */; };
 		95294B35255D59C90007F007 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95294B34255D59C90007F007 /* StartViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		95216EC025635AE100990CD1 /* quizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizBrain.swift; sourceTree = "<group>"; };
+		95216EC325637D3300990CD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95294B2D255D59C90007F007 /* GuessThePhilosopher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessThePhilosopher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95294B30255D59C90007F007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95294B32255D59C90007F007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		95294B24255D59C90007F007 = {
 			isa = PBXGroup;
 			children = (
+				95216EC325637D3300990CD1 /* README.md */,
 				95294B2F255D59C90007F007 /* GuessThePhilosopher */,
 				95294B2E255D59C90007F007 /* Products */,
 			);
@@ -159,6 +162,7 @@
 			files = (
 				95294B3D255D59C90007F007 /* LaunchScreen.storyboard in Resources */,
 				95294B3A255D59C90007F007 /* Assets.xcassets in Resources */,
+				95216EC425637D3300990CD1 /* README.md in Resources */,
 				95294B38255D59C90007F007 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
