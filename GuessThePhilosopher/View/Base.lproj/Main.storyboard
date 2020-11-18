@@ -26,11 +26,8 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNc-7d-gAz">
-                                <rect key="frame" x="0.0" y="676" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="667.33333333333337" width="414" height="228.66666666666663"/>
                                 <color key="backgroundColor" name="Dark"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="tPD-9W-hbn"/>
-                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EMy-tD-P1u">
                                 <rect key="frame" x="20" y="687.33333333333337" width="374" height="154.66666666666663"/>
@@ -74,6 +71,7 @@
                             <constraint firstItem="EMy-tD-P1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iqr-eY-WZZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EMy-tD-P1u" secondAttribute="bottom" constant="20" id="peX-0S-GUw"/>
                             <constraint firstItem="EEU-Xu-a2F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q2b-qn-bvU"/>
+                            <constraint firstItem="EMy-tD-P1u" firstAttribute="top" secondItem="gNc-7d-gAz" secondAttribute="top" constant="20" id="uVt-Ki-2V5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -116,88 +114,73 @@
                                 <rect key="frame" x="20" y="105" width="374" height="684"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfP-Od-XKR">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="116.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="ThV-Ep-GLx"/>
+                                        </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="We are what we repeatedly do. Excellence is not an act, but a habit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yXv-qd-Qqm">
-                                        <rect key="frame" x="0.0" y="116.66666666666666" width="374" height="122.66666666666666"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="We are what we repeatedly do. Excellence is not an act, but a habit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="yXv-qd-Qqm">
+                                        <rect key="frame" x="0.0" y="57.000000000000014" width="374" height="162.33333333333337"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
                                         <color key="textColor" name="Dark"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ena-yv-4UP">
-                                        <rect key="frame" x="0.0" y="239.33333333333331" width="374" height="117"/>
+                                        <rect key="frame" x="0.0" y="219.33333333333331" width="374" height="57"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-9w-gQj">
-                                        <rect key="frame" x="0.0" y="356.33333333333331" width="374" height="210.99999999999994"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-9w-gQj">
+                                        <rect key="frame" x="0.0" y="276.33333333333326" width="374" height="350.66666666666674"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct7-0A-kfy">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="211"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vqE-tD-hA8">
-                                                        <rect key="frame" x="10" y="10" width="157" height="191"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RichMan" translatesAutoresizingMaskIntoConstraints="NO" id="bIb-Lb-SRf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="170.66666666666666"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvD-vs-9bn">
-                                                                <rect key="frame" x="0.0" y="170.66666666666669" width="157" height="20.333333333333343"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="Dark"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-i9-Gnh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="211"/>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="vqE-tD-hA8" secondAttribute="trailing" constant="10" id="2bY-JV-hzg"/>
-                                                    <constraint firstItem="vqE-tD-hA8" firstAttribute="leading" secondItem="ct7-0A-kfy" secondAttribute="leading" constant="10" id="3HP-zw-g6b"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vqE-tD-hA8" secondAttribute="bottom" constant="10" id="5k1-nc-988"/>
-                                                    <constraint firstItem="vqE-tD-hA8" firstAttribute="top" secondItem="ct7-0A-kfy" secondAttribute="top" constant="10" id="CZS-IE-H8p"/>
-                                                    <constraint firstItem="ID6-i9-Gnh" firstAttribute="leading" secondItem="ct7-0A-kfy" secondAttribute="leading" id="Jb2-kD-JMP"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ID6-i9-Gnh" secondAttribute="trailing" id="Jur-dO-wvf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="ID6-i9-Gnh" secondAttribute="bottom" id="gdU-Ij-iy7"/>
-                                                    <constraint firstItem="ID6-i9-Gnh" firstAttribute="top" secondItem="ct7-0A-kfy" secondAttribute="top" id="k2k-nT-2Wl"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6U-Ob-GQ4">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="211"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="UuI-sI-FB5">
-                                                        <rect key="frame" x="10" y="10" width="157" height="191"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RichMan" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-Rp-mPC">
-                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="170.66666666666666"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jP8-TU-dGs">
-                                                                <rect key="frame" x="0.0" y="170.66666666666669" width="157" height="20.333333333333343"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" name="Dark"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CV-c4-Ga9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="211"/>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="3CV-c4-Ga9" secondAttribute="bottom" id="0H0-fi-mps"/>
-                                                    <constraint firstAttribute="trailing" secondItem="UuI-sI-FB5" secondAttribute="trailing" constant="10" id="NlT-Ot-cLE"/>
-                                                    <constraint firstAttribute="bottom" secondItem="UuI-sI-FB5" secondAttribute="bottom" constant="10" id="TpA-se-4jW"/>
-                                                    <constraint firstItem="3CV-c4-Ga9" firstAttribute="leading" secondItem="E6U-Ob-GQ4" secondAttribute="leading" id="VLO-Oa-gcz"/>
-                                                    <constraint firstItem="3CV-c4-Ga9" firstAttribute="top" secondItem="E6U-Ob-GQ4" secondAttribute="top" id="qKl-CV-XVs"/>
-                                                    <constraint firstItem="UuI-sI-FB5" firstAttribute="leading" secondItem="E6U-Ob-GQ4" secondAttribute="leading" constant="10" id="sFt-jG-HL9"/>
-                                                    <constraint firstItem="UuI-sI-FB5" firstAttribute="top" secondItem="E6U-Ob-GQ4" secondAttribute="top" constant="10" id="t23-ov-TFr"/>
-                                                    <constraint firstAttribute="trailing" secondItem="3CV-c4-Ga9" secondAttribute="trailing" id="xIj-jB-sFd"/>
-                                                </constraints>
-                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-i9-Gnh" customClass="LayoutableButton" customModule="GuessThePhilosopher" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="53.333333333333371" width="182" height="244"/>
+                                                <color key="backgroundColor" name="Beige"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                                                <state key="normal" title="Hello" image="RichMan">
+                                                    <color key="titleColor" name="Dark"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" name="Dark"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="authorButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="Phq-sQ-iRd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CV-c4-Ga9" customClass="LayoutableButton" customModule="GuessThePhilosopher" customModuleProvider="target">
+                                                <rect key="frame" x="192" y="53.333333333333371" width="182" height="244"/>
+                                                <color key="backgroundColor" name="Beige"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                                                <state key="normal" title="Hello2" image="RichMan">
+                                                    <color key="titleColor" name="Dark"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" name="Dark"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="authorButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="EjQ-Kq-7VX"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfL-qE-d8E">
-                                        <rect key="frame" x="0.0" y="567.33333333333337" width="374" height="116.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="627" width="374" height="57"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -257,12 +240,10 @@
                         <outlet property="bottomView" destination="f7a-nC-4ir" id="EvZ-xU-t24"/>
                         <outlet property="bottomViewTopConstraint" destination="nmZ-UB-bBN" id="7oj-tT-qJH"/>
                         <outlet property="checkButton" destination="ct6-sp-9LY" id="iOj-Vo-7Mj"/>
-                        <outlet property="leftAuthorText" destination="SvD-vs-9bn" id="2TQ-Q0-LU9"/>
+                        <outlet property="closeQuizButton" destination="CGb-Fj-54w" id="RKU-wN-LKv"/>
                         <outlet property="leftButton" destination="ID6-i9-Gnh" id="x0u-eM-qpM"/>
                         <outlet property="progressView" destination="SBS-9G-wGa" id="4Hs-k8-G7s"/>
                         <outlet property="quoteText" destination="yXv-qd-Qqm" id="Z3X-J6-6eK"/>
-                        <outlet property="resetButton" destination="CGb-Fj-54w" id="RKU-wN-LKv"/>
-                        <outlet property="rightAuthorText" destination="jP8-TU-dGs" id="WlN-gp-qKb"/>
                         <outlet property="rightButton" destination="3CV-c4-Ga9" id="twn-Ue-8a8"/>
                     </connections>
                 </viewController>
@@ -271,6 +252,14 @@
             <point key="canvasLocation" x="1111.5942028985507" y="87.723214285714278"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="3CV-c4-Ga9">
+            <size key="intrinsicContentSize" width="170.66666666666666" height="244"/>
+        </designable>
+        <designable name="ID6-i9-Gnh">
+            <size key="intrinsicContentSize" width="171.66666666666666" height="244"/>
+        </designable>
+    </designables>
     <resources>
         <image name="RichMan" width="170.66667175292969" height="170.66667175292969"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
