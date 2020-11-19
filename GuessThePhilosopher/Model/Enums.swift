@@ -22,4 +22,7 @@ enum Authors: String {
     case Sartre
     case Confucius
     case Machiavelli
+    case AlbertCamus = "Albert Camus"
+    case JohnLocke = "John Locke"
+    case Dostoevsky
 }

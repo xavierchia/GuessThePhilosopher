@@ -98,7 +98,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                         </state>
                                         <connections>
-                                            <action selector="resetButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="eh2-pe-Bd8"/>
+                                            <action selector="closeButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="eh2-pe-Bd8"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SBS-9G-wGa">
@@ -121,7 +121,7 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="We are what we repeatedly do. Excellence is not an act, but a habit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="yXv-qd-Qqm">
                                         <rect key="frame" x="0.0" y="57.000000000000014" width="374" height="162.33333333333337"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                         <color key="textColor" name="Dark"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -192,10 +192,21 @@
                             </stackView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7a-nC-4ir">
                                 <rect key="frame" x="0.0" y="896" width="414" height="240"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYw-IS-Kfo">
+                                        <rect key="frame" x="20" y="19.999999999999996" width="374" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" red="0.3529411764705882" green="0.65098039215686276" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72156862745098038" green="0.94901960784313721" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="CYw-IS-Kfo" firstAttribute="leading" secondItem="f7a-nC-4ir" secondAttribute="leading" constant="20" id="6Y9-oK-SwF"/>
+                                    <constraint firstItem="CYw-IS-Kfo" firstAttribute="top" secondItem="f7a-nC-4ir" secondAttribute="top" constant="20" id="eOd-mg-Ylo"/>
                                     <constraint firstAttribute="height" constant="240" id="hAZ-TO-Wia"/>
+                                    <constraint firstAttribute="trailing" secondItem="CYw-IS-Kfo" secondAttribute="trailing" constant="20" id="prP-Ej-KaT"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct6-sp-9LY">
@@ -238,9 +249,9 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="f7a-nC-4ir" id="EvZ-xU-t24"/>
+                        <outlet property="bottomViewLabel" destination="CYw-IS-Kfo" id="VyF-go-1mF"/>
                         <outlet property="bottomViewTopConstraint" destination="nmZ-UB-bBN" id="7oj-tT-qJH"/>
                         <outlet property="checkButton" destination="ct6-sp-9LY" id="iOj-Vo-7Mj"/>
-                        <outlet property="closeQuizButton" destination="CGb-Fj-54w" id="RKU-wN-LKv"/>
                         <outlet property="leftButton" destination="ID6-i9-Gnh" id="x0u-eM-qpM"/>
                         <outlet property="progressView" destination="SBS-9G-wGa" id="4Hs-k8-G7s"/>
                         <outlet property="quoteText" destination="yXv-qd-Qqm" id="Z3X-J6-6eK"/>
@@ -277,9 +288,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
