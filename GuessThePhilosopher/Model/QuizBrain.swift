@@ -8,6 +8,21 @@
 struct QuizBrain {
     var currentStatus = QuizStatus.waiting
     
+    var answer = ""
+    
+    mutating func getQuestion() -> (author1: String, author2: String, quoteText: String) {
+        let quotesShuffled = quotes.shuffled()
+
+        let author1 = quotesShuffled[0].author.rawValue
+        let author2 = quotesShuffled[1].author.rawValue
+        
+        let zeroOrOne = Int.random(in: 0...1)
+        let quoteText = quotesShuffled[zeroOrOne].quoteTexts.shuffled()[0]
+        
+        answer = quotesShuffled[zeroOrOne].author.rawValue
+        return (author1, author2, quoteText)
+    }
+    
     let quotes = [
         Quote(author: Authors.Aristotle, quoteTexts: [
             "It is during our darkest moments that we must focus to see the light.",
@@ -80,18 +95,54 @@ struct QuizBrain {
             "The man who moves a mountain begins by carrying away small stones.",
             "Life is really simple, but we insist on making it complicated.",
             "When it is obvious that the goals cannot be reached, don't adjust the goals, adjust the action steps."
+        ]),
+        Quote(author: Authors.Machiavelli, quoteTexts: [
+            "It is better to be feared than loved, if you cannot be both.",
+            "Men judge generally more by the eye than by the hand, for everyone can see and few can feel. Every one sees what you appear to be, few really know what you are.",
+            "The first method for estimating the intelligence of a ruler is to look at the men he has around him.",
+            "Where the willingness is great, the difficulties cannot be great.",
+            "Never was anything great achieved without danger.",
+            "One who deceives will always find those who allow themselves to be deceived.",
+            "If an injury has to be done to a man it should be so severe that his vengeance need not be feared.",
+            "He who wishes to be obeyed must know how to command.",
+            "Hatred is gained as much by good works as by evil.",
+            "There is no other way to guard yourself against flattery than by making men understand that telling you the truth will not offend you."
+        ]),
+        Quote(author: Authors.AlbertCamus, quoteTexts: [
+            "The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy.",
+            "In the depth of winter, I finally learned that within me there lay an invincible summer.",
+            "Autumn is a second spring when every leaf is a flower.",
+            "Don't walk behind me; I may not lead. Don't walk in front of me; I may not follow. Just walk beside me and be my friend.",
+            "Life is the sum of all your choices.",
+            "I rebel; therefore I exist.",
+            "Men must live and create. Live to the point of tears.",
+            "An intellectual is someone whose mind watches itself.",
+            "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.",
+            "Freedom is nothing but a chance to be better."
+        ]),
+        Quote(author: Authors.JohnLocke, quoteTexts: [
+            "What worries you, masters you.",
+            "I have always thought the actions of men the best interpreters of their thoughts.",
+            "Every man has a property in his own person. This nobody has a right to, but himself.",
+            "The reason why men enter into society is the preservation of their property.",
+            "No man's knowledge here can go beyond his experience.",
+            "Government has no other end, but the preservation of property.",
+            "Fortitude is the guard and support of the other virtues.",
+            "All wealth is the product of labor.",
+            "The discipline of desire is the background of character.",
+            "The only defense against the world is a thorough knowledge of it."
+        ]),
+        Quote(author: Authors.Dostoevsky, quoteTexts: [
+            "Man grows used to everything, the scoundrel.",
+            "The soul is healed by being with children.",
+            "To live without Hope is to Cease to live.",
+            "The degree of civilization in a society can be judged by entering its prisons.",
+            "What is hell? I maintain that it is the suffering of being unable to love.",
+            "Love in action is a harsh and dreadful thing compared with love in dreams.",
+            "The greatest happiness is to know the source of unhappiness.",
+            "Nothing is easier than to denounce the evildoer; nothing is more difficult than to understand him.",
+            "Man is sometimes extraordinarily, passionately, in love with suffering.",
+            "To go wrong in one's own way is better than to go right in someone else's."
         ])
     ]
-    
-    
-    var question: (author1: String, author2: String, quoteText: String) {
-        let quotesShuffled = quotes.shuffled()
-
-        let author1 = quotesShuffled[0].author.rawValue
-        let author2 = quotesShuffled[1].author.rawValue
-        
-        let zeroOrOne = Int.random(in: 0...1)
-        let quoteText = quotesShuffled[zeroOrOne].quoteTexts.shuffled()[0]
-        return (author1, author2, quoteText)
-    }
 }
