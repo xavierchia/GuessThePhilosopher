@@ -35,18 +35,18 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match the quote  to the philosopher." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-X1-w7s" userLabel="Match the quote  to the philosopher.">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="81.666666666666671"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <color key="textColor" name="Beige"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zS-7Y-Vxw">
                                         <rect key="frame" x="0.0" y="101.66666666666663" width="374" height="53"/>
-                                        <color key="backgroundColor" name="Accent"/>
+                                        <color key="backgroundColor" red="0.34509803921568627" green="0.80000000000000004" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="a0E-cq-Num"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="BEGIN">
-                                            <color key="titleColor" name="Dark"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -61,7 +61,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Beige"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EEU-Xu-a2F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AX3-rU-J89"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gNc-7d-gAz" secondAttribute="trailing" id="BGF-VF-9lG"/>
@@ -74,6 +74,9 @@
                             <constraint firstItem="EMy-tD-P1u" firstAttribute="top" secondItem="gNc-7d-gAz" secondAttribute="top" constant="20" id="uVt-Ki-2V5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beginButton" destination="2zS-7Y-Vxw" id="hYQ-I0-WiA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +136,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-i9-Gnh" customClass="LayoutableButton" customModule="GuessThePhilosopher" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="53.333333333333371" width="182" height="244"/>
-                                                <color key="backgroundColor" name="Beige"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="Hello" image="RichMan">
@@ -156,7 +159,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CV-c4-Ga9" customClass="LayoutableButton" customModule="GuessThePhilosopher" customModuleProvider="target">
                                                 <rect key="frame" x="192" y="53.333333333333371" width="182" height="244"/>
-                                                <color key="backgroundColor" name="Beige"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
                                                 <state key="normal" title="Hello2" image="RichMan">
@@ -191,7 +194,7 @@
                                 </constraints>
                             </stackView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7a-nC-4ir">
-                                <rect key="frame" x="0.0" y="896" width="414" height="240"/>
+                                <rect key="frame" x="0.0" y="896" width="414" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYw-IS-Kfo">
                                         <rect key="frame" x="20" y="19.999999999999996" width="374" height="33.666666666666657"/>
@@ -205,19 +208,22 @@
                                 <constraints>
                                     <constraint firstItem="CYw-IS-Kfo" firstAttribute="leading" secondItem="f7a-nC-4ir" secondAttribute="leading" constant="20" id="6Y9-oK-SwF"/>
                                     <constraint firstItem="CYw-IS-Kfo" firstAttribute="top" secondItem="f7a-nC-4ir" secondAttribute="top" constant="20" id="eOd-mg-Ylo"/>
-                                    <constraint firstAttribute="height" constant="240" id="hAZ-TO-Wia"/>
+                                    <constraint firstAttribute="height" constant="180" id="hAZ-TO-Wia"/>
                                     <constraint firstAttribute="trailing" secondItem="CYw-IS-Kfo" secondAttribute="trailing" constant="20" id="prP-Ej-KaT"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct6-sp-9LY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct6-sp-9LY" customClass="CheckButton" customModule="GuessThePhilosopher" customModuleProvider="target">
                                 <rect key="frame" x="20" y="789" width="374" height="53"/>
-                                <color key="backgroundColor" name="Dark"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="8kU-up-JP4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <state key="normal" title="CHECK">
-                                    <color key="titleColor" name="Accent"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -230,7 +236,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DZ9-rO-F6E"/>
-                        <color key="backgroundColor" name="Beige"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ct6-sp-9LY" firstAttribute="leading" secondItem="DZ9-rO-F6E" secondAttribute="leading" constant="20" id="1Wk-pK-eK9"/>
                             <constraint firstItem="USU-LR-3MP" firstAttribute="leading" secondItem="DZ9-rO-F6E" secondAttribute="leading" constant="20" id="8bf-qW-Zw8"/>
@@ -240,9 +246,9 @@
                             <constraint firstItem="2Iz-CR-o4i" firstAttribute="top" secondItem="USU-LR-3MP" secondAttribute="bottom" id="ONL-Zh-44M"/>
                             <constraint firstItem="f7a-nC-4ir" firstAttribute="leading" secondItem="Tsj-Cz-5WJ" secondAttribute="leading" id="RdB-75-UKL"/>
                             <constraint firstItem="DZ9-rO-F6E" firstAttribute="bottom" secondItem="ct6-sp-9LY" secondAttribute="bottom" constant="20" id="ToV-12-iQH"/>
+                            <constraint firstItem="f7a-nC-4ir" firstAttribute="top" secondItem="Tsj-Cz-5WJ" secondAttribute="bottom" id="W7L-Sh-6ws"/>
                             <constraint firstAttribute="trailing" secondItem="2Iz-CR-o4i" secondAttribute="trailing" constant="20" id="hSj-6e-Ydo"/>
                             <constraint firstItem="2Iz-CR-o4i" firstAttribute="leading" secondItem="DZ9-rO-F6E" secondAttribute="leading" constant="20" id="lAB-my-fpM"/>
-                            <constraint firstItem="f7a-nC-4ir" firstAttribute="top" secondItem="Tsj-Cz-5WJ" secondAttribute="bottom" id="nmZ-UB-bBN"/>
                             <constraint firstItem="DZ9-rO-F6E" firstAttribute="trailing" secondItem="USU-LR-3MP" secondAttribute="trailing" constant="20" id="p0R-95-6r2"/>
                             <constraint firstAttribute="trailing" secondItem="f7a-nC-4ir" secondAttribute="trailing" id="tyi-MC-M6M"/>
                         </constraints>
@@ -250,7 +256,7 @@
                     <connections>
                         <outlet property="bottomView" destination="f7a-nC-4ir" id="EvZ-xU-t24"/>
                         <outlet property="bottomViewLabel" destination="CYw-IS-Kfo" id="VyF-go-1mF"/>
-                        <outlet property="bottomViewTopConstraint" destination="nmZ-UB-bBN" id="7oj-tT-qJH"/>
+                        <outlet property="bottomViewTopConstraint" destination="W7L-Sh-6ws" id="SSk-Ll-Fad"/>
                         <outlet property="checkButton" destination="ct6-sp-9LY" id="iOj-Vo-7Mj"/>
                         <outlet property="leftButton" destination="ID6-i9-Gnh" id="x0u-eM-qpM"/>
                         <outlet property="progressView" destination="SBS-9G-wGa" id="4Hs-k8-G7s"/>
@@ -276,9 +282,6 @@
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="Accent">
             <color red="0.0" green="0.71799999475479126" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Beige">
-            <color red="0.99199998378753662" green="0.79600000381469727" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Blue">
             <color red="0.059000000357627869" green="0.29800000786781311" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

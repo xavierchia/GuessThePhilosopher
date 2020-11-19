@@ -8,6 +8,8 @@
 struct QuizBrain {
     var currentStatus = QuizStatus.waiting
     
+    var score = 0
+    var questionNum = 1
     var answer = ""
     
     mutating func getQuestion() -> (author1: String, author2: String, quoteText: String) {
@@ -21,6 +23,17 @@ struct QuizBrain {
         
         answer = quotesShuffled[zeroOrOne].author.rawValue
         return (author1, author2, quoteText)
+    }
+    
+    mutating func isCorrect(userAnswer: String) -> Bool {
+        questionNum += 1
+
+        if userAnswer == answer {
+            score += 1
+            return true
+        }
+        
+        return false
     }
     
     let quotes = [

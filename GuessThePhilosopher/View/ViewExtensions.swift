@@ -3,42 +3,40 @@ import UIKit
 // Borders and shadows
 extension UIView {
     
-    func shadowMe() {
-        self.layer.shadowRadius = 0.5
-        self.layer.shadowOffset = CGSize(width: 0, height: 3)
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowColor = #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.4588235294, alpha: 1)
-    }
-    
-    func borderAndShadowMe() {
+    func authorDefaultStyling() {
+        
         self.layer.borderWidth = 3
         self.layer.cornerRadius = 20
         self.layer.borderColor = #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.4588235294, alpha: 1)
-        self.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.7960784314, blue: 0.6196078431, alpha: 1)
-        shadowMe()
+        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        self.layer.shadowRadius = 0.0
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowColor = #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.4588235294, alpha: 1)
+
     }
     
     func buttonSelectedStyling() {
         self.layer.borderColor = #colorLiteral(red: 0, green: 0.7176470588, blue: 0.7607843137, alpha: 1)
         self.layer.shadowColor = #colorLiteral(red: 0, green: 0.7176470588, blue: 0.7607843137, alpha: 1)
-        self.backgroundColor = #colorLiteral(red: 0.8549019608, green: 0.7843137255, blue: 0.6352941176, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 0.8625685573, green: 0.9570303559, blue: 0.9697696567, alpha: 1)
     }
 }
 
-
-// Animate bottom card
-extension UIView{
-    func bottomCardShow(){
-        UIView.animate(withDuration: 0.2) {
-            self.center.y -= self.bounds.height
-        }
-    }
-    func bottomCardHide(){
-        UIView.animate(withDuration: 0.2) {
-            self.backgroundColor = UIColor.clear
-        } completion: { (complete: Bool) in
-            self.center.y += self.bounds.height
-            self.backgroundColor = #colorLiteral(red: 0.7215686275, green: 0.9490196078, blue: 0.5529411765, alpha: 1)
+// Disabled UI button
+class CheckButton: UIButton {
+    open override var isEnabled: Bool{
+        didSet {
+            if self.isEnabled {
+                self.backgroundColor = #colorLiteral(red: 0.3452036977, green: 0.8009640574, blue: 0.006656988058, alpha: 1)
+                self.layer.shadowColor = #colorLiteral(red: 0.3465779424, green: 0.6556648612, blue: 0.005139762536, alpha: 1)
+                self.layer.shadowRadius = 0.0
+                self.layer.shadowOffset = CGSize(width: 0, height: 5)
+                self.layer.shadowOpacity = 1.0
+            } else {
+                self.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+            }
         }
     }
 }
