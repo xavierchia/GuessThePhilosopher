@@ -38,29 +38,53 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
-        
-        if sender.titleLabel?.text == QuizButtonText.CHECK.rawValue {
 
+        progressView.progress = Float(quizBrain.questionNum / quizBrain.totalQuestions)
+
+        if quizBrain.state == QuizButtonText.CHECK {
+            
+            quizBrain.state = QuizButtonText.CONTINUE
             if quizBrain.isCorrect(userAnswer: quizBrain.userAnswer) {
 
-                correctResponseStyling()
-                bottomViewLabel.text = quizBrain.praises.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
-                quizBrain.playSound(Sound.correct)
+                questionCorrect()
             } else {
 
-                incorrectResponseStyling()
-                bottomViewLabel.text = quizBrain.shames.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
-                quizBrain.playSound(Sound.wrong)
+                questionWrong()
             }
             
             authorButtonsEnabled(false)
             raiseBottomView()
-        } else if sender.titleLabel?.text == QuizButtonText.CONTINUE.rawValue {
+        } else if quizBrain.state == QuizButtonText.CONTINUE {
             
+            quizBrain.state = QuizButtonText.CHECK
+            
+            if quizBrain.isGameOver() {
+                gameOver()
+            }
             prepareStylingAndQuestion()
             lowerBottomView()
         }
     }
+    
+    //MARK: - Question Correct, Wrong or Game Over
+    func questionCorrect() {
+        correctResponseStyling()
+        bottomViewLabel.text = quizBrain.praises.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
+        quizBrain.playSound(Sound.correct)
+    }
+    
+    func questionWrong () {
+        incorrectResponseStyling()
+        bottomViewLabel.text = quizBrain.shames.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
+        quizBrain.playSound(Sound.wrong)
+    }
+    
+    func gameOver() {
+        quizBrain.questionNum = 0
+        progressView.progress = Float(quizBrain.questionNum / quizBrain.totalQuestions)
+        self.performSegue(withIdentifier: "quizToResult", sender: self)
+    }
+    
     
     //MARK: - Preparation
     func prepareStylingAndQuestion() {
@@ -78,7 +102,7 @@ class QuizViewController: UIViewController {
         rightButton.setTitle(question.author2, for: .normal)
     }
     
-    //MARK: - Author button
+    //MARK: - Author Button
     @IBAction func authorButtonPressed(_ sender: UIButton) {
         resetAuthorButtonsStyling()
         sender.buttonSelectedStyling()
@@ -115,7 +139,7 @@ class QuizViewController: UIViewController {
         checkButton.layer.shadowColor = #colorLiteral(red: 0.9186751246, green: 0.1684108377, blue: 0.1682819128, alpha: 1)
     }
     
-    //MARK: - Bottom view
+    //MARK: - Bottom View
     func bottomViewTransparent(_ isTrue: Bool) {
         if isTrue {
             bottomView.alpha = 0
@@ -141,6 +165,15 @@ class QuizViewController: UIViewController {
         } completion: { (complete: Bool) in
             self.bottomViewTopConstraint.constant += self.bottomView.bounds.height
             self.bottomViewTransparent(false)
+        }
+    }
+    
+    //MARK: - Segue Preparation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "quizToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.quizBrain.score = quizBrain.score
+            quizBrain.score = 0
         }
     }
 

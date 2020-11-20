@@ -24,5 +24,5 @@ enum Author: String {
 }
 
 enum Sound: String {
-    case correct, wrong, congrats
+    case correct, wrong, finish
 }

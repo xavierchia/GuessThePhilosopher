@@ -18,7 +18,12 @@
 		952A0D71255E896400AE432A /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A0D70255E896400AE432A /* ViewExtensions.swift */; };
 		95676810256756A60048B15D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9567680F256756A60048B15D /* AVFoundation.framework */; };
 		95676819256767630048B15D /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95676817256767630048B15D /* correct.wav */; };
-		9567681A256767630048B15D /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95676818256767630048B15D /* wrong.wav */; };
+		95819A4125676BE500FC32A7 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95819A4025676BE500FC32A7 /* wrong.wav */; };
+		95B783A625679F5600B8EE2B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B783A525679F5600B8EE2B /* ResultViewController.swift */; };
+		95B783AB2567B31E00B8EE2B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B783AA2567B31E00B8EE2B /* Category.swift */; };
+		95B783B22567C1CB00B8EE2B /* ohMyGosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95B783B12567C1CB00B8EE2B /* ohMyGosh.wav */; };
+		95B783B52567C58300B8EE2B /* really.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95B783B42567C58300B8EE2B /* really.wav */; };
+		95B783BC2567C84200B8EE2B /* wow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95B783BB2567C84200B8EE2B /* wow.wav */; };
 		95CB55392564966800A2664B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB55382564966800A2664B /* Enums.swift */; };
 		95CB553C25649A0A00A2664B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB553B25649A0A00A2664B /* Quote.swift */; };
 		95E7524C255E50C10081C23C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7524B255E50C10081C23C /* QuizViewController.swift */; };
@@ -38,7 +43,12 @@
 		952A0D70255E896400AE432A /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		9567680F256756A60048B15D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		95676817256767630048B15D /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
-		95676818256767630048B15D /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		95819A4025676BE500FC32A7 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		95B783A525679F5600B8EE2B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		95B783AA2567B31E00B8EE2B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		95B783B12567C1CB00B8EE2B /* ohMyGosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ohMyGosh.wav; sourceTree = "<group>"; };
+		95B783B42567C58300B8EE2B /* really.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = really.wav; sourceTree = "<group>"; };
+		95B783BB2567C84200B8EE2B /* wow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wow.wav; sourceTree = "<group>"; };
 		95CB55382564966800A2664B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		95CB553B25649A0A00A2664B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		95E7524B255E50C10081C23C /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 			children = (
 				95294B34255D59C90007F007 /* StartViewController.swift */,
 				95E7524B255E50C10081C23C /* QuizViewController.swift */,
+				95B783A525679F5600B8EE2B /* ResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -81,6 +92,7 @@
 				95216EC025635AE100990CD1 /* QuizBrain.swift */,
 				95CB553B25649A0A00A2664B /* Quote.swift */,
 				95CB55382564966800A2664B /* Enums.swift */,
+				95B783AA2567B31E00B8EE2B /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,7 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				95676817256767630048B15D /* correct.wav */,
-				95676818256767630048B15D /* wrong.wav */,
+				95819A4025676BE500FC32A7 /* wrong.wav */,
+				95B783B12567C1CB00B8EE2B /* ohMyGosh.wav */,
+				95B783B42567C58300B8EE2B /* really.wav */,
+				95B783BB2567C84200B8EE2B /* wow.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -196,8 +211,11 @@
 				95294B3A255D59C90007F007 /* Assets.xcassets in Resources */,
 				95216EC425637D3300990CD1 /* README.md in Resources */,
 				95676819256767630048B15D /* correct.wav in Resources */,
-				9567681A256767630048B15D /* wrong.wav in Resources */,
+				95819A4125676BE500FC32A7 /* wrong.wav in Resources */,
+				95B783B22567C1CB00B8EE2B /* ohMyGosh.wav in Resources */,
+				95B783BC2567C84200B8EE2B /* wow.wav in Resources */,
 				95294B38255D59C90007F007 /* Main.storyboard in Resources */,
+				95B783B52567C58300B8EE2B /* really.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95294B35255D59C90007F007 /* StartViewController.swift in Sources */,
+				95B783AB2567B31E00B8EE2B /* Category.swift in Sources */,
 				95216EC125635AE100990CD1 /* QuizBrain.swift in Sources */,
 				952A0D71255E896400AE432A /* ViewExtensions.swift in Sources */,
 				95294B31255D59C90007F007 /* AppDelegate.swift in Sources */,
@@ -216,6 +235,7 @@
 				95CB55392564966800A2664B /* Enums.swift in Sources */,
 				95294B33255D59C90007F007 /* SceneDelegate.swift in Sources */,
 				95E7524C255E50C10081C23C /* QuizViewController.swift in Sources */,
+				95B783A625679F5600B8EE2B /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
