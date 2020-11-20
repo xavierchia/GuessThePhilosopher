@@ -5,16 +5,12 @@
 //  Created by xavier chia on 18/11/20.
 //
 
-enum QuizStatus {
-    case correct, wrong, waiting
-}
-
 enum QuizButtonText: String {
     case CHECK
     case CONTINUE
 }
 
-enum Authors: String {
+enum Author: String {
     case Aristotle
     case Nietzsche
     case Plato
@@ -25,4 +21,8 @@ enum Authors: String {
     case AlbertCamus = "Albert Camus"
     case JohnLocke = "John Locke"
     case Dostoevsky
+}
+
+enum Sound: String {
+    case correct, wrong, congrats
 }

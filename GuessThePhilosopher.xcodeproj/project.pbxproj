@@ -16,6 +16,9 @@
 		95294B3A255D59C90007F007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95294B39255D59C90007F007 /* Assets.xcassets */; };
 		95294B3D255D59C90007F007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95294B3B255D59C90007F007 /* LaunchScreen.storyboard */; };
 		952A0D71255E896400AE432A /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A0D70255E896400AE432A /* ViewExtensions.swift */; };
+		95676810256756A60048B15D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9567680F256756A60048B15D /* AVFoundation.framework */; };
+		95676819256767630048B15D /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95676817256767630048B15D /* correct.wav */; };
+		9567681A256767630048B15D /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95676818256767630048B15D /* wrong.wav */; };
 		95CB55392564966800A2664B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB55382564966800A2664B /* Enums.swift */; };
 		95CB553C25649A0A00A2664B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB553B25649A0A00A2664B /* Quote.swift */; };
 		95E7524C255E50C10081C23C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7524B255E50C10081C23C /* QuizViewController.swift */; };
@@ -33,6 +36,9 @@
 		95294B3C255D59C90007F007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95294B3E255D59C90007F007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		952A0D70255E896400AE432A /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		9567680F256756A60048B15D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		95676817256767630048B15D /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		95676818256767630048B15D /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
 		95CB55382564966800A2664B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		95CB553B25649A0A00A2664B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		95E7524B255E50C10081C23C /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95676810256756A60048B15D /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +91,7 @@
 				95216EC325637D3300990CD1 /* README.md */,
 				95294B2F255D59C90007F007 /* GuessThePhilosopher */,
 				95294B2E255D59C90007F007 /* Products */,
+				9567680E256756A60048B15D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +112,27 @@
 				951F9736255E4A66005B6C62 /* ViewController */,
 				951F9734255E4A58005B6C62 /* View */,
 				95294B39255D59C90007F007 /* Assets.xcassets */,
+				956768122567609E0048B15D /* Sounds */,
 				95294B3E255D59C90007F007 /* Info.plist */,
 			);
 			path = GuessThePhilosopher;
+			sourceTree = "<group>";
+		};
+		9567680E256756A60048B15D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9567680F256756A60048B15D /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		956768122567609E0048B15D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				95676817256767630048B15D /* correct.wav */,
+				95676818256767630048B15D /* wrong.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +195,8 @@
 				95294B3D255D59C90007F007 /* LaunchScreen.storyboard in Resources */,
 				95294B3A255D59C90007F007 /* Assets.xcassets in Resources */,
 				95216EC425637D3300990CD1 /* README.md in Resources */,
+				95676819256767630048B15D /* correct.wav in Resources */,
+				9567681A256767630048B15D /* wrong.wav in Resources */,
 				95294B38255D59C90007F007 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

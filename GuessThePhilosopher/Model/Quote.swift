@@ -6,6 +6,6 @@
 //
 
 struct Quote {
-    let author: Authors
+    let author: Author
     let quoteTexts: [String]
 }

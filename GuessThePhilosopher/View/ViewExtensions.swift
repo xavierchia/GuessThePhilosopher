@@ -36,6 +36,7 @@ class CheckButton: UIButton {
                 self.layer.shadowOpacity = 1.0
             } else {
                 self.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+                self.layer.shadowColor = #colorLiteral(red: 0.3465779424, green: 0.6556648612, blue: 0.005139762536, alpha: 0)
             }
         }
     }

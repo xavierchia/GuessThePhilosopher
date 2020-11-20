@@ -5,29 +5,57 @@
 //  Created by xavier chia on 17/11/20.
 //
 
+import AVFoundation
+
 struct QuizBrain {
-    var currentStatus = QuizStatus.waiting
-    
     var score = 0
-    var questionNum = 1
+    var questionNum = 0
     var answer = ""
+    var correctAuthor = ""
+    var wrongAuthor = ""
+    
+    var userAnswer = ""
+    
+    var audioPlayer = AVAudioPlayer()
+    
+    mutating func playSound(_ sound: Sound) {
+        
+        let soundString = sound.rawValue
+        
+        let soundFile = Bundle.main.path(forResource: soundString, ofType: "wav")
+        let url = URL(fileURLWithPath: soundFile!)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.play()
+        } catch {
+            print("wrong sound error")
+        }
+        
+    }
+    
     
     mutating func getQuestion() -> (author1: String, author2: String, quoteText: String) {
+        questionNum += 1
+        
         let quotesShuffled = quotes.shuffled()
-
+        
+        //        Get 2 random authors
         let author1 = quotesShuffled[0].author.rawValue
         let author2 = quotesShuffled[1].author.rawValue
         
+        //        Store the true values
         let zeroOrOne = Int.random(in: 0...1)
-        let quoteText = quotesShuffled[zeroOrOne].quoteTexts.shuffled()[0]
+        let quoteText = quotesShuffled[zeroOrOne].quoteTexts.randomElement() ?? ""
         
         answer = quotesShuffled[zeroOrOne].author.rawValue
+        wrongAuthor = zeroOrOne == 0 ? author2 : author1
+        correctAuthor = zeroOrOne == 0 ? author1 : author2
+        
         return (author1, author2, quoteText)
     }
     
     mutating func isCorrect(userAnswer: String) -> Bool {
-        questionNum += 1
-
+        
         if userAnswer == answer {
             score += 1
             return true
@@ -36,8 +64,34 @@ struct QuizBrain {
         return false
     }
     
+    let praises = [
+        "Author says well done",
+        "Author is proud of you",
+        "Author is amazed",
+        "Author says wow",
+        "Author says good job",
+        "Author thinks you're out of this world",
+        "Author thinks you're mind blowing",
+        "Author says perfect",
+        "Author says brilliant",
+        "Author says stupendous"
+    ]
+    
+    let shames = [
+        "Author is disappointed",
+        "Author is sad",
+        "Author is shocked",
+        "Author is rolling in his grave",
+        "Author judges you",
+        "Author feels neglected",
+        "Author feels ignored",
+        "Author feels unloved",
+        "Author feels unrecognized",
+        "Author feels unappreciated"
+    ]
+    
     let quotes = [
-        Quote(author: Authors.Aristotle, quoteTexts: [
+        Quote(author: Author.Aristotle, quoteTexts: [
             "It is during our darkest moments that we must focus to see the light.",
             "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
             "Courage is the first of human qualities, because it is the quality which guarantees the others.",
@@ -49,7 +103,7 @@ struct QuizBrain {
             "Educating the mind without educating the heart is no education at all",
             "Friendship is a single soul dwelling in two bodies."
         ]),
-        Quote(author: Authors.Nietzsche, quoteTexts: [
+        Quote(author: Author.Nietzsche, quoteTexts: [
             "There are no beautiful surface without a terrible depth.",
             "Sometimes people don't want to hear the truth because they don't want their illusions destroyed.",
             "The tree that would grow to heaven must send its roots to hell.",
@@ -61,7 +115,7 @@ struct QuizBrain {
             "The snake which cannot cast its skin has to die. As well the minds which are prevented from changing their opinions; they cease to be mind.",
             "No price is too high to pay for the privilege of owning yourself."
         ]),
-        Quote(author: Authors.Plato, quoteTexts: [
+        Quote(author: Author.Plato, quoteTexts: [
             "Good people do not need laws to tell them to act responsibly, while bad people will find a way around the laws.",
             "The greatest wealth is to live content with little.",
             "Wise men speak because they have something to say; fools because they have to say something.",
@@ -73,7 +127,7 @@ struct QuizBrain {
             "Reality is created by the mind, we can change our reality by changing our mind.",
             "Courage is knowing what not to fear."
         ]),
-        Quote(author: Authors.LaoZi, quoteTexts: [
+        Quote(author: Author.LaoZi, quoteTexts: [
             "Do the difficult things while they are easy and do the great things while they are small. A journey of a thousand miles must begin with a single step.",
             "When I let go of what I am, I become what I might be.",
             "Mastering others is strength. Mastering yourself is true power.",
@@ -85,7 +139,7 @@ struct QuizBrain {
             "If you do not change direction, you may end up where you are heading.",
             "A good traveler has no fixed plans, and is not intent on arriving."
         ]),
-        Quote(author: Authors.Sartre, quoteTexts: [
+        Quote(author: Author.Sartre, quoteTexts: [
             "Freedom is what you do with what's been done to you.",
             "If you are lonely when you are alone, you are in bad company.",
             "Everything has been figured out, except how to live.",
@@ -93,11 +147,11 @@ struct QuizBrain {
             "Life begins on the other side of despair.",
             "Only the guy who isn't rowing has time to rock the boat.",
             "Like all dreamers, I mistook disenchantment for truth.",
-            "Hell is—other people!",
+            "Hell is other people!",
             "Better to die on one's feet than to live on one's knees.",
             "We are our choices."
         ]),
-        Quote(author: Authors.Confucius, quoteTexts: [
+        Quote(author: Author.Confucius, quoteTexts: [
             "Wheresoever you go, go with all your heart.",
             "Our greatest glory is not in never falling, but in rising every time we fall.",
             "It does not matter how slowly you go so long as you do not stop.",
@@ -109,7 +163,7 @@ struct QuizBrain {
             "Life is really simple, but we insist on making it complicated.",
             "When it is obvious that the goals cannot be reached, don't adjust the goals, adjust the action steps."
         ]),
-        Quote(author: Authors.Machiavelli, quoteTexts: [
+        Quote(author: Author.Machiavelli, quoteTexts: [
             "It is better to be feared than loved, if you cannot be both.",
             "Men judge generally more by the eye than by the hand, for everyone can see and few can feel. Every one sees what you appear to be, few really know what you are.",
             "The first method for estimating the intelligence of a ruler is to look at the men he has around him.",
@@ -121,7 +175,7 @@ struct QuizBrain {
             "Hatred is gained as much by good works as by evil.",
             "There is no other way to guard yourself against flattery than by making men understand that telling you the truth will not offend you."
         ]),
-        Quote(author: Authors.AlbertCamus, quoteTexts: [
+        Quote(author: Author.AlbertCamus, quoteTexts: [
             "The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy.",
             "In the depth of winter, I finally learned that within me there lay an invincible summer.",
             "Autumn is a second spring when every leaf is a flower.",
@@ -133,7 +187,7 @@ struct QuizBrain {
             "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.",
             "Freedom is nothing but a chance to be better."
         ]),
-        Quote(author: Authors.JohnLocke, quoteTexts: [
+        Quote(author: Author.JohnLocke, quoteTexts: [
             "What worries you, masters you.",
             "I have always thought the actions of men the best interpreters of their thoughts.",
             "Every man has a property in his own person. This nobody has a right to, but himself.",
@@ -145,7 +199,7 @@ struct QuizBrain {
             "The discipline of desire is the background of character.",
             "The only defense against the world is a thorough knowledge of it."
         ]),
-        Quote(author: Authors.Dostoevsky, quoteTexts: [
+        Quote(author: Author.Dostoevsky, quoteTexts: [
             "Man grows used to everything, the scoundrel.",
             "The soul is healed by being with children.",
             "To live without Hope is to Cease to live.",
