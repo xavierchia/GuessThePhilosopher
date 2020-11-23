@@ -23,7 +23,7 @@ class ResultViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         quizBrain.playSound(Sound.finish)
         
         scoreLabel.text = "\(Int(quizBrain.score)) / \(Int(quizBrain.totalQuestions))"
@@ -34,8 +34,16 @@ class ResultViewController: UIViewController {
         againButton.layer.shadowRadius = 0.0
         againButton.layer.shadowOffset = CGSize(width: 0, height: 5)
         againButton.layer.shadowOpacity = 1.0
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
 }

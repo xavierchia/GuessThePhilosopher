@@ -268,7 +268,7 @@
                         <outlet property="progressView" destination="SBS-9G-wGa" id="4Hs-k8-G7s"/>
                         <outlet property="quoteText" destination="yXv-qd-Qqm" id="Z3X-J6-6eK"/>
                         <outlet property="rightButton" destination="3CV-c4-Ga9" id="twn-Ue-8a8"/>
-                        <segue destination="SzO-dt-a4t" kind="presentation" identifier="quizToResult" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3h4-xr-7Bp"/>
+                        <segue destination="0lx-uE-3tf" kind="presentation" identifier="quizToResult" modalPresentationStyle="overFullScreen" id="KXd-tX-p1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhH-Vf-agf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -338,7 +338,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPT-aX-8NP">
-                                <rect key="frame" x="369.66666666666669" y="44" width="24.333333333333314" height="23.666666666666671"/>
+                                <rect key="frame" x="369.66666666666669" y="88" width="24.333333333333314" height="23.666666666666671"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="semibold">
@@ -347,7 +347,7 @@
                                 </state>
                                 <connections>
                                     <action selector="infoButtonPressed:" destination="SzO-dt-a4t" eventType="touchUpInside" id="F5N-8a-MP5"/>
-                                    <segue destination="7E9-Sk-VIq" kind="presentation" modalPresentationStyle="overFullScreen" id="zjf-5W-19A"/>
+                                    <segue destination="MBU-Dg-HJz" kind="show" id="HDo-tE-ywB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -367,6 +367,7 @@
                             <constraint firstItem="kk3-vu-EyF" firstAttribute="bottom" secondItem="Vwp-Fl-QZk" secondAttribute="bottom" constant="20" id="yz8-Bg-aKz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WZi-Y3-41K"/>
                     <connections>
                         <outlet property="adviceLabel" destination="hja-Lf-axt" id="IPA-bc-xhm"/>
                         <outlet property="againButton" destination="1iQ-Id-zRB" id="EKy-Bi-gHg"/>
@@ -375,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFX-wP-0I4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="88"/>
+            <point key="canvasLocation" x="3120" y="88"/>
         </scene>
         <!--About-->
         <scene sceneID="hI0-1j-D3e">
@@ -386,7 +387,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Xav" translatesAutoresizingMaskIntoConstraints="NO" id="SxD-DD-4qi">
-                                <rect key="frame" x="0.0" y="87.999999999999972" width="414" height="358.33333333333326"/>
+                                <rect key="frame" x="20" y="87.999999999999972" width="374" height="358.33333333333326"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2u5-BP-4jJ">
                                 <rect key="frame" x="20" y="446.33333333333326" width="374" height="415.66666666666674"/>
@@ -396,7 +397,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-qw-J4x">
                                                 <rect key="frame" x="0.0" y="0.0" width="354.33333333333331" height="271.66666666666669"/>
-                                                <string key="text">Hi! 👋 I'm Xavier Chia. A freelance iOS developer from Singapore 🏝.   If you have an feedback, or would like to work together, drop me an email at xavier.cpy@gmail.com 🤓</string>
+                                                <string key="text">Hi! 👋 I'm Xavier Chia. A freelance iOS developer from Singapore 🏝.   If you have any feedback, or would like to work together, drop me an email at xavier.cpy@gmail.com 🤓</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -407,7 +408,7 @@
                                         <rect key="frame" x="0.0" y="385.66666666666669" width="50" height="30"/>
                                         <state key="normal" title="Credits"/>
                                         <connections>
-                                            <segue destination="rob-Ui-hJt" kind="show" id="Inc-qF-yfi"/>
+                                            <segue destination="rob-Ui-hJt" kind="show" id="DTT-oV-Twj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -416,13 +417,13 @@
                         <viewLayoutGuide key="safeArea" id="djI-b7-lWv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SxD-DD-4qi" firstAttribute="trailing" secondItem="djI-b7-lWv" secondAttribute="trailing" id="6HE-XE-4NC"/>
+                            <constraint firstItem="SxD-DD-4qi" firstAttribute="trailing" secondItem="djI-b7-lWv" secondAttribute="trailing" constant="-20" id="6HE-XE-4NC"/>
                             <constraint firstItem="djI-b7-lWv" firstAttribute="bottom" secondItem="2u5-BP-4jJ" secondAttribute="bottom" id="D4t-bn-zg7"/>
                             <constraint firstItem="2u5-BP-4jJ" firstAttribute="top" secondItem="SxD-DD-4qi" secondAttribute="bottom" id="GGH-Il-UhY"/>
                             <constraint firstItem="2u5-BP-4jJ" firstAttribute="leading" secondItem="djI-b7-lWv" secondAttribute="leading" constant="20" id="Kur-nJ-mfh"/>
                             <constraint firstAttribute="trailing" secondItem="2u5-BP-4jJ" secondAttribute="trailing" constant="20" id="MyQ-eL-kGp"/>
                             <constraint firstItem="SxD-DD-4qi" firstAttribute="height" secondItem="xsC-Gg-EIg" secondAttribute="height" multiplier="0.4" id="VGO-h4-Cjc"/>
-                            <constraint firstItem="SxD-DD-4qi" firstAttribute="leading" secondItem="djI-b7-lWv" secondAttribute="leading" id="aX2-VG-gLz"/>
+                            <constraint firstItem="SxD-DD-4qi" firstAttribute="leading" secondItem="djI-b7-lWv" secondAttribute="leading" constant="20" id="aX2-VG-gLz"/>
                             <constraint firstItem="SxD-DD-4qi" firstAttribute="top" secondItem="djI-b7-lWv" secondAttribute="top" id="fVx-21-ZTN"/>
                         </constraints>
                     </view>
@@ -430,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AlY-i3-pmJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3946" y="88"/>
+            <point key="canvasLocation" x="4003" y="88"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SHL-lx-40b">
@@ -440,9 +441,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR4-hW-9gQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-1A-J1T">
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
-                                <string key="text">Icon from Flaticon: Freepik  Music from Freesounds: Correct - ZenithInfinitiveStudios OhMyGosh - allietron Really - Reitanng Wow - Alvvie  Music from Zapsplat: Wrong </string>
+                                <string key="text">Icon from Flaticon: Freepik  Music from Freesounds: Correct - ZenithInfinitiveStudios OhMyGosh - allietron Really - Reitanng Wow - Alvvie  Music from Zapsplat: Wrong</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -451,35 +452,35 @@
                         <viewLayoutGuide key="safeArea" id="Amb-9I-pD8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SR4-hW-9gQ" firstAttribute="leading" secondItem="Amb-9I-pD8" secondAttribute="leading" constant="20" id="SL1-cg-S94"/>
-                            <constraint firstItem="Amb-9I-pD8" firstAttribute="bottom" secondItem="SR4-hW-9gQ" secondAttribute="bottom" id="eJz-GD-Su4"/>
-                            <constraint firstItem="SR4-hW-9gQ" firstAttribute="trailing" secondItem="Amb-9I-pD8" secondAttribute="trailing" constant="-20" id="j0U-3m-l2Z"/>
-                            <constraint firstItem="SR4-hW-9gQ" firstAttribute="top" secondItem="Amb-9I-pD8" secondAttribute="top" id="xXp-BY-X3s"/>
+                            <constraint firstItem="MhA-1A-J1T" firstAttribute="leading" secondItem="Amb-9I-pD8" secondAttribute="leading" constant="20" id="27d-Tj-J5B"/>
+                            <constraint firstItem="Amb-9I-pD8" firstAttribute="trailing" secondItem="MhA-1A-J1T" secondAttribute="trailing" constant="20" id="GFj-fz-YjX"/>
+                            <constraint firstItem="Amb-9I-pD8" firstAttribute="bottom" secondItem="MhA-1A-J1T" secondAttribute="bottom" id="rny-fa-sXD"/>
+                            <constraint firstItem="MhA-1A-J1T" firstAttribute="top" secondItem="Amb-9I-pD8" secondAttribute="top" id="sYd-wF-z9Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SDK-jW-CEC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hks-FG-LhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4740.579710144928" y="87.723214285714278"/>
+            <point key="canvasLocation" x="4933" y="88"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Jc9-DD-zg0">
+        <!--Navigation View Controller-->
+        <scene sceneID="u2v-E2-hv0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7E9-Sk-VIq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0lx-uE-3tf" customClass="NavigationViewController" customModule="GuessThePhilosopher" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YRT-gk-s5W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ibo-wf-faR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MBU-Dg-HJz" kind="relationship" relationship="rootViewController" id="NXh-H1-SvD"/>
+                        <segue destination="SzO-dt-a4t" kind="relationship" relationship="rootViewController" id="W2n-FO-6zw"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcn-vX-f0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fQ-8e-e85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="88"/>
+            <point key="canvasLocation" x="2190" y="88"/>
         </scene>
     </scenes>
     <designables>
