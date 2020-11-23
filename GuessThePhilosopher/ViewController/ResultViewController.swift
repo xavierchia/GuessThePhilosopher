@@ -18,6 +18,9 @@ class ResultViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func infoButtonPressed(_ sender: UIButton) {
+        print("Info button pressed")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

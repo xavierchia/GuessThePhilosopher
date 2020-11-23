@@ -29,8 +29,8 @@ class CheckButton: UIButton {
     open override var isEnabled: Bool{
         didSet {
             if self.isEnabled {
-                self.backgroundColor = #colorLiteral(red: 0.3452036977, green: 0.8009640574, blue: 0.006656988058, alpha: 1)
-                self.layer.shadowColor = #colorLiteral(red: 0.3465779424, green: 0.6556648612, blue: 0.005139762536, alpha: 1)
+                self.backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1)
+                self.layer.shadowColor = #colorLiteral(red: 0.2786974716, green: 0.643254283, blue: 0.01059799502, alpha: 1)
                 self.layer.shadowRadius = 0.0
                 self.layer.shadowOffset = CGSize(width: 0, height: 5)
                 self.layer.shadowOpacity = 1.0
