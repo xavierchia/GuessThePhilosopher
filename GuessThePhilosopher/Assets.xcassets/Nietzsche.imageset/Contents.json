@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "rich-man.png",
+      "filename" : "nietzscheGrey-512-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "rich-man@2x.png",
+      "filename" : "nietzscheGrey-512-01@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "rich-man@3x.png",
+      "filename" : "nietzscheGrey-512-01@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

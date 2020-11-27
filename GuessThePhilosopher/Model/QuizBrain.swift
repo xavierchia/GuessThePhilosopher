@@ -23,10 +23,10 @@ struct QuizBrain {
     
     var result: Category {
         switch (score / totalQuestions) {
-        case 0..<0.5: return Category(color: #colorLiteral(red: 1, green: 0.2156862745, blue: 0.3725490196, alpha: 1), advice: "Go read a book!")
-        case 0.5..<0.75: return Category(color: #colorLiteral(red: 0.7490196078, green: 0.3529411765, blue: 0.9490196078, alpha: 1), advice: "You barely made it...")
-        case 0.75..<0.9: return Category(color: #colorLiteral(red: 0.3921568627, green: 0.8235294118, blue: 1, alpha: 1), advice: "There's a brain in the house!")
-        default: return Category(color: #colorLiteral(red: 0.1960784314, green: 0.8431372549, blue: 0.2941176471, alpha: 1), advice: "You are a philosopher king!")
+        case 0..<0.5: return Category(color: #colorLiteral(red: 1, green: 0.2941176471, blue: 0.2941176471, alpha: 1), advice: "Go read a book!")
+        case 0.5..<0.75: return Category(color: #colorLiteral(red: 0.1098039216, green: 0.6901960784, blue: 0.9647058824, alpha: 1), advice: "You barely made it...")
+        case 0.75..<0.9: return Category(color: #colorLiteral(red: 0.8078431373, green: 0.5098039216, blue: 1, alpha: 1), advice: "There's a brain in the house!")
+        default: return Category(color: #colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1), advice: "You are a philosopher king!")
         }
     }
     
@@ -51,23 +51,25 @@ struct QuizBrain {
     }
     
     
-    mutating func getQuestion() -> (author1: String, author2: String, quoteText: String) {
+    mutating func getQuestion() -> (author1Name: String, author1Face: UIImage, author2Name: String, author2Face: UIImage, quoteText: String) {
         questionNum += 1
         
         let quotesShuffled = quotes.shuffled()
         
         //        Get 2 random authors
-        let author1 = quotesShuffled[0].author.rawValue
-        let author2 = quotesShuffled[1].author.rawValue
+        let author1Name = quotesShuffled[0].author.rawValue
+        let author1Face = quotesShuffled[0].face
+        let author2Name = quotesShuffled[1].author.rawValue
+        let author2Face = quotesShuffled[1].face
         
         //        Store the true values
         let zeroOrOne = Int.random(in: 0...1)
         
         let quoteText = quotesShuffled[zeroOrOne].quoteTexts.randomElement() ?? ""
-        wrongAuthor = zeroOrOne == 0 ? author2 : author1
-        correctAuthor = zeroOrOne == 0 ? author1 : author2
+        correctAuthor = zeroOrOne == 0 ? author1Name : author2Name
+        wrongAuthor = zeroOrOne == 0 ? author2Name : author1Name
         
-        return (author1, author2, quoteText)
+        return (author1Name, author1Face, author2Name, author2Face, quoteText)
     }
     
     mutating func isCorrect(userAnswer: String) -> Bool {
@@ -111,19 +113,23 @@ struct QuizBrain {
     ]
     
     let quotes = [
-        Quote(author: Author.Aristotle, quoteTexts: [
-            "It is during our darkest moments that we must focus to see the light.",
-            "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
-            "Courage is the first of human qualities, because it is the quality which guarantees the others.",
-            "Knowing yourself is the beginning of all wisdom.",
-            "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
-            "Pleasure in the job puts perfection in the work.",
-            "Happiness is an expression of the soul in considered actions.",
-            "The high-minded man must care more for the truth than for what people think",
-            "Educating the mind without educating the heart is no education at all",
-            "Friendship is a single soul dwelling in two bodies."
+        Quote(author: Author.Socrates,
+              face: #imageLiteral(resourceName: "Socrates"),
+              quoteTexts: [
+            "An unexamined life is not worth living.",
+            "One thing only I know, and that is that I know nothing.",
+            "I am the wisest man alive, for I know one thing, and that is that I know nothing.",
+            "To find yourself, think for yourself.",
+            "True knowledge exists in knowing that you know nothing.",
+            "I know that I am intelligent, because I know that I know nothing.",
+            "Beware the barrenness of a busy life.",
+            "When the debate is over, slander becomes the tool of the loser.",
+            "Education is the kindling of a flame, not the filling of a vessel.",
+            "There is only one good, knowledge, and one evil, ignorance."
         ]),
-        Quote(author: Author.Nietzsche, quoteTexts: [
+        Quote(author: Author.Nietzsche,
+              face: #imageLiteral(resourceName: "Nietzsche"),
+              quoteTexts: [
             "There are no beautiful surface without a terrible depth.",
             "Sometimes people don't want to hear the truth because they don't want their illusions destroyed.",
             "The tree that would grow to heaven must send its roots to hell.",
@@ -135,7 +141,9 @@ struct QuizBrain {
             "The snake which cannot cast its skin has to die. As well the minds which are prevented from changing their opinions; they cease to be mind.",
             "No price is too high to pay for the privilege of owning yourself."
         ]),
-        Quote(author: Author.Plato, quoteTexts: [
+        Quote(author: Author.Plato,
+              face: #imageLiteral(resourceName: "Plato"),
+              quoteTexts: [
             "Good people do not need laws to tell them to act responsibly, while bad people will find a way around the laws.",
             "The greatest wealth is to live content with little.",
             "Wise men speak because they have something to say; fools because they have to say something.",
@@ -147,7 +155,9 @@ struct QuizBrain {
             "Reality is created by the mind, we can change our reality by changing our mind.",
             "Courage is knowing what not to fear."
         ]),
-        Quote(author: Author.LaoZi, quoteTexts: [
+        Quote(author: Author.LaoZi,
+              face: #imageLiteral(resourceName: "LaoZi"),
+              quoteTexts: [
             "Do the difficult things while they are easy and do the great things while they are small. A journey of a thousand miles must begin with a single step.",
             "When I let go of what I am, I become what I might be.",
             "Mastering others is strength. Mastering yourself is true power.",
@@ -159,7 +169,9 @@ struct QuizBrain {
             "If you do not change direction, you may end up where you are heading.",
             "A good traveler has no fixed plans, and is not intent on arriving."
         ]),
-        Quote(author: Author.Sartre, quoteTexts: [
+        Quote(author: Author.Sartre,
+              face: #imageLiteral(resourceName: "Sartre"),
+              quoteTexts: [
             "Freedom is what you do with what's been done to you.",
             "If you are lonely when you are alone, you are in bad company.",
             "Everything has been figured out, except how to live.",
@@ -171,7 +183,9 @@ struct QuizBrain {
             "Better to die on one's feet than to live on one's knees.",
             "We are our choices."
         ]),
-        Quote(author: Author.Confucius, quoteTexts: [
+        Quote(author: Author.Confucius,
+              face: #imageLiteral(resourceName: "Confucius"),
+              quoteTexts: [
             "Wheresoever you go, go with all your heart.",
             "Our greatest glory is not in never falling, but in rising every time we fall.",
             "It does not matter how slowly you go so long as you do not stop.",
@@ -183,7 +197,9 @@ struct QuizBrain {
             "Life is really simple, but we insist on making it complicated.",
             "When it is obvious that the goals cannot be reached, don't adjust the goals, adjust the action steps."
         ]),
-        Quote(author: Author.Machiavelli, quoteTexts: [
+        Quote(author: Author.Machiavelli,
+              face: #imageLiteral(resourceName: "Machiavelli"),
+              quoteTexts: [
             "It is better to be feared than loved, if you cannot be both.",
             "Men judge generally more by the eye than by the hand, for everyone can see and few can feel. Every one sees what you appear to be, few really know what you are.",
             "The first method for estimating the intelligence of a ruler is to look at the men he has around him.",
@@ -195,7 +211,9 @@ struct QuizBrain {
             "Hatred is gained as much by good works as by evil.",
             "There is no other way to guard yourself against flattery than by making men understand that telling you the truth will not offend you."
         ]),
-        Quote(author: Author.AlbertCamus, quoteTexts: [
+        Quote(author: Author.AlbertCamus,
+              face: #imageLiteral(resourceName: "Albert"),
+              quoteTexts: [
             "The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy.",
             "In the depth of winter, I finally learned that within me there lay an invincible summer.",
             "Autumn is a second spring when every leaf is a flower.",
@@ -207,7 +225,9 @@ struct QuizBrain {
             "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.",
             "Freedom is nothing but a chance to be better."
         ]),
-        Quote(author: Author.JohnLocke, quoteTexts: [
+        Quote(author: Author.JohnLocke,
+              face: #imageLiteral(resourceName: "Locke"),
+              quoteTexts: [
             "What worries you, masters you.",
             "I have always thought the actions of men the best interpreters of their thoughts.",
             "Every man has a property in his own person. This nobody has a right to, but himself.",
@@ -219,7 +239,9 @@ struct QuizBrain {
             "The discipline of desire is the background of character.",
             "The only defense against the world is a thorough knowledge of it."
         ]),
-        Quote(author: Author.Dostoevsky, quoteTexts: [
+        Quote(author: Author.Dostoevsky,
+              face: #imageLiteral(resourceName: "Dost"),
+              quoteTexts: [
             "Man grows used to everything, the scoundrel.",
             "The soul is healed by being with children.",
             "To live without Hope is to Cease to live.",

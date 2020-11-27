@@ -27,19 +27,25 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-            
+        
+        quizBrain.playSound(Sound.start)
         progressView.transform = CGAffineTransform(scaleX: 1, y: 3)
         prepareStylingAndQuestion()
     }
-    
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func checkButtonPressed(_ sender: UIButton) {
+    @IBAction func checkButtonTouchDown(_ sender: CheckButton) {
+        checkButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        checkButton.frame.origin.y += 5
+    }
+    
+    @IBAction func checkButtonTouchUp(_ sender: UIButton) {
 
         progressView.progress = Float(quizBrain.questionNum / quizBrain.totalQuestions)
+        checkButton.frame.origin.y -= 5
 
         if quizBrain.state == QuizButtonText.CHECK {
             
@@ -98,8 +104,10 @@ class QuizViewController: UIViewController {
     func populateQuestionText() {
         let question = quizBrain.getQuestion()
         quoteText.text = question.quoteText
-        leftButton.setTitle(question.author1, for: .normal)
-        rightButton.setTitle(question.author2, for: .normal)
+        leftButton.setTitle(question.author1Name, for: .normal)
+        leftButton.setImage(question.author1Face, for: .normal)
+        rightButton.setTitle(question.author2Name, for: .normal)
+        rightButton.setImage(question.author2Face, for: .normal)
     }
     
     //MARK: - Author Button
@@ -122,13 +130,15 @@ class QuizViewController: UIViewController {
         } else {
             leftButton.isUserInteractionEnabled = false
             rightButton.isUserInteractionEnabled = false
-        }
+        } 
     }
     
     //MARK: - Responses
     func correctResponseStyling() {
         bottomView.backgroundColor = #colorLiteral(red: 0.7215686275, green: 0.9490196078, blue: 0.5529411765, alpha: 1)
         bottomViewLabel.textColor = #colorLiteral(red: 0.3529411765, green: 0.6509803922, blue: 0.01960784314, alpha: 1)
+        
+        checkButton.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
     
     func incorrectResponseStyling() {
@@ -137,6 +147,7 @@ class QuizViewController: UIViewController {
         
         checkButton.backgroundColor = #colorLiteral(red: 0.9850447774, green: 0.295574367, blue: 0.2933387756, alpha: 1)
         checkButton.layer.shadowColor = #colorLiteral(red: 0.9186751246, green: 0.1684108377, blue: 0.1682819128, alpha: 1)
+        checkButton.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
     
     //MARK: - Bottom View
@@ -153,8 +164,8 @@ class QuizViewController: UIViewController {
     func raiseBottomView() {
         UIView.animate(withDuration: 0.2) {
             self.bottomViewTopConstraint.constant -= self.bottomView.bounds.height
-            self.checkButton.setTitle(QuizButtonText.CONTINUE.rawValue, for: .normal)
             self.view.layoutIfNeeded()
+            self.checkButton.setTitle(QuizButtonText.CONTINUE.rawValue, for: .normal)
         }
     }
     
@@ -172,11 +183,10 @@ class QuizViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "quizToResult" {
             let destinationVC = segue.destination as! NavigationViewController
-//            let secondViewcontroller = destViewController.viewcontrollers.first as! SecondViewcontroller
-//            secondViewcontroller.myData2 = myData
             let secondVC = destinationVC.viewControllers.first as! ResultViewController
             secondVC.quizBrain.score = quizBrain.score
             quizBrain.score = 0
+            secondVC.firstVC = self
         }
     }
 

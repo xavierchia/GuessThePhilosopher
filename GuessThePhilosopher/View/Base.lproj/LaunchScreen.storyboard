@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RichMan" translatesAutoresizingMaskIntoConstraints="NO" id="1Vm-0z-lf3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1Vm-0z-lf3">
                                 <rect key="frame" x="81.5" y="304" width="251" height="288"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="288" id="CEg-Lt-gap"/>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="RichMan" width="170.5" height="170.5"/>
+        <image name="StartIcon" width="170.5" height="170.5"/>
     </resources>
 </document>

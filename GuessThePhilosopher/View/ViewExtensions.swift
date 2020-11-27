@@ -7,20 +7,15 @@ extension UIView {
         
         self.layer.borderWidth = 3
         self.layer.cornerRadius = 20
-        self.layer.borderColor = #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.4588235294, alpha: 1)
+        self.layer.borderColor = #colorLiteral(red: 0.6862745098, green: 0.6862745098, blue: 0.6862745098, alpha: 1)
         self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        self.layer.shadowRadius = 0.0
-        self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowColor = #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.4588235294, alpha: 1)
 
     }
     
     func buttonSelectedStyling() {
-        self.layer.borderColor = #colorLiteral(red: 0, green: 0.7176470588, blue: 0.7607843137, alpha: 1)
-        self.layer.shadowColor = #colorLiteral(red: 0, green: 0.7176470588, blue: 0.7607843137, alpha: 1)
-        self.backgroundColor = #colorLiteral(red: 0.8625685573, green: 0.9570303559, blue: 0.9697696567, alpha: 1)
+        self.layer.borderColor = #colorLiteral(red: 0.1176470588, green: 0.6431372549, blue: 1, alpha: 1)
+        self.layer.shadowColor = #colorLiteral(red: 0.1180284048, green: 0.6430098675, blue: 1, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 0.1180284048, green: 0.6430098675, blue: 1, alpha: 0.1040774829)
     }
 }
 

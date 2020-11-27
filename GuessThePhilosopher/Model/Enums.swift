@@ -11,7 +11,7 @@ enum QuizButtonText: String {
 }
 
 enum Author: String {
-    case Aristotle
+    case Socrates
     case Nietzsche
     case Plato
     case LaoZi = "Lao Zi"
@@ -24,5 +24,5 @@ enum Author: String {
 }
 
 enum Sound: String {
-    case correct, wrong, finish
+    case start, correct, wrong, finish
 }

@@ -20,6 +20,7 @@
 		95676810256756A60048B15D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9567680F256756A60048B15D /* AVFoundation.framework */; };
 		95676819256767630048B15D /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95676817256767630048B15D /* correct.wav */; };
 		95819A4125676BE500FC32A7 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95819A4025676BE500FC32A7 /* wrong.wav */; };
+		95B0493A256F6613003DFED7 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95B04939256F6613003DFED7 /* start.wav */; };
 		95B783A625679F5600B8EE2B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B783A525679F5600B8EE2B /* ResultViewController.swift */; };
 		95B783AB2567B31E00B8EE2B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B783AA2567B31E00B8EE2B /* Category.swift */; };
 		95B783B22567C1CB00B8EE2B /* ohMyGosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 95B783B12567C1CB00B8EE2B /* ohMyGosh.wav */; };
@@ -46,6 +47,7 @@
 		9567680F256756A60048B15D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		95676817256767630048B15D /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		95819A4025676BE500FC32A7 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		95B04939256F6613003DFED7 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
 		95B783A525679F5600B8EE2B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		95B783AA2567B31E00B8EE2B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		95B783B12567C1CB00B8EE2B /* ohMyGosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ohMyGosh.wav; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		956768122567609E0048B15D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				95B04939256F6613003DFED7 /* start.wav */,
 				95676817256767630048B15D /* correct.wav */,
 				95819A4025676BE500FC32A7 /* wrong.wav */,
 				95B783B12567C1CB00B8EE2B /* ohMyGosh.wav */,
@@ -213,6 +216,7 @@
 				95294B3D255D59C90007F007 /* LaunchScreen.storyboard in Resources */,
 				95294B3A255D59C90007F007 /* Assets.xcassets in Resources */,
 				95216EC425637D3300990CD1 /* README.md in Resources */,
+				95B0493A256F6613003DFED7 /* start.wav in Resources */,
 				95676819256767630048B15D /* correct.wav in Resources */,
 				95819A4125676BE500FC32A7 /* wrong.wav in Resources */,
 				95B783B22567C1CB00B8EE2B /* ohMyGosh.wav in Resources */,
