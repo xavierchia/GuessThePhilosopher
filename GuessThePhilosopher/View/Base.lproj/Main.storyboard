@@ -139,52 +139,110 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-9w-gQj">
                                         <rect key="frame" x="0.0" y="262.33333333333326" width="374" height="371.66666666666674"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-i9-Gnh" customClass="LayoutableButton" customModule="GuessThePhilosopher" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="39" width="182" height="294"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <inset key="contentEdgeInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                                                <state key="normal" title="Hello" image="Plato">
-                                                    <color key="titleColor" name="Dark"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" name="Dark"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="authorButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="Phq-sQ-iRd"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CV-c4-Ga9" customClass="LayoutableButton" customModule="GuessThePhilosopher" customModuleProvider="target">
-                                                <rect key="frame" x="192" y="39" width="182" height="294"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <inset key="contentEdgeInsets" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
-                                                <state key="normal" title="Hello2" image="Dost">
-                                                    <color key="titleColor" name="Dark"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" name="Dark"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="authorButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="EjQ-Kq-7VX"/>
-                                                </connections>
-                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Koz-YY-99r">
+                                                <rect key="frame" x="0.0" y="96.999999999999986" width="182" height="177.66666666666663"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zum-C4-qgr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="177.66666666666666"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oe1-hx-Q0I">
+                                                                <rect key="frame" x="8" y="8" width="166" height="128"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-OE-Cps">
+                                                                <rect key="frame" x="8" y="136.00000000000006" width="166" height="33.666666666666657"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-i9-Gnh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="177.66666666666666"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" name="Dark"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="authorButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="Phq-sQ-iRd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Zum-C4-qgr" secondAttribute="trailing" id="Bd2-0w-W0p"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ID6-i9-Gnh" secondAttribute="trailing" id="IbA-LO-Jaf"/>
+                                                    <constraint firstItem="Zum-C4-qgr" firstAttribute="leading" secondItem="Koz-YY-99r" secondAttribute="leading" id="Ke8-po-jgT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ID6-i9-Gnh" secondAttribute="bottom" id="RFY-wh-L0t"/>
+                                                    <constraint firstItem="ID6-i9-Gnh" firstAttribute="top" secondItem="Koz-YY-99r" secondAttribute="top" id="SeQ-qs-npP"/>
+                                                    <constraint firstItem="ID6-i9-Gnh" firstAttribute="leading" secondItem="Koz-YY-99r" secondAttribute="leading" id="b9p-hB-9fh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Zum-C4-qgr" secondAttribute="bottom" id="wVi-DX-cOU"/>
+                                                    <constraint firstItem="Zum-C4-qgr" firstAttribute="top" secondItem="Koz-YY-99r" secondAttribute="top" id="xcG-NM-Lsl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgE-M2-uU6">
+                                                <rect key="frame" x="192" y="91.999999999999986" width="182" height="187.66666666666663"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rk2-va-VFv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="187.66666666666666"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diK-2C-5nb">
+                                                                <rect key="frame" x="8" y="8" width="166" height="128"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uM-9x-mMV">
+                                                                <rect key="frame" x="8" y="146.00000000000006" width="166" height="33.666666666666657"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-is-gAG" userLabel="Right Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="187.66666666666666"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" name="Dark"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageToTitleSpacing">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="imageVerticalAlignmentName" value="top"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="imageHorizontalAlignmentName" value="center"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="authorButtonPressed:" destination="h18-Jq-Nlx" eventType="touchUpInside" id="j2Z-kk-gAr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Yec-is-gAG" secondAttribute="trailing" id="827-U7-8K7"/>
+                                                    <constraint firstItem="Rk2-va-VFv" firstAttribute="top" secondItem="bgE-M2-uU6" secondAttribute="top" id="DtV-Dl-EZn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Rk2-va-VFv" secondAttribute="trailing" id="MA5-Lr-Ztf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Rk2-va-VFv" secondAttribute="bottom" id="MkZ-hY-t24"/>
+                                                    <constraint firstItem="Rk2-va-VFv" firstAttribute="leading" secondItem="bgE-M2-uU6" secondAttribute="leading" id="N5Q-B1-JQl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Yec-is-gAG" secondAttribute="bottom" id="fWd-sF-c6q"/>
+                                                    <constraint firstItem="Yec-is-gAG" firstAttribute="leading" secondItem="bgE-M2-uU6" secondAttribute="leading" id="ibx-xi-hHO"/>
+                                                    <constraint firstItem="Yec-is-gAG" firstAttribute="top" secondItem="bgE-M2-uU6" secondAttribute="top" id="jJH-sf-Iko"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfL-qE-d8E">
@@ -273,10 +331,14 @@
                         <outlet property="bottomViewLabel" destination="CYw-IS-Kfo" id="VyF-go-1mF"/>
                         <outlet property="bottomViewTopConstraint" destination="W7L-Sh-6ws" id="SSk-Ll-Fad"/>
                         <outlet property="checkButton" destination="ct6-sp-9LY" id="iOj-Vo-7Mj"/>
-                        <outlet property="leftButton" destination="ID6-i9-Gnh" id="x0u-eM-qpM"/>
+                        <outlet property="leftAuthor" destination="dB3-OE-Cps" id="g0P-Sn-l1u"/>
+                        <outlet property="leftButton" destination="ID6-i9-Gnh" id="lgL-0a-9xf"/>
+                        <outlet property="leftImage" destination="Oe1-hx-Q0I" id="KOl-LI-irF"/>
                         <outlet property="progressView" destination="SBS-9G-wGa" id="4Hs-k8-G7s"/>
                         <outlet property="quoteText" destination="yXv-qd-Qqm" id="Z3X-J6-6eK"/>
-                        <outlet property="rightButton" destination="3CV-c4-Ga9" id="twn-Ue-8a8"/>
+                        <outlet property="rightAuthor" destination="5uM-9x-mMV" id="HV8-qt-JMt"/>
+                        <outlet property="rightButton" destination="Yec-is-gAG" id="o53-WD-MoL"/>
+                        <outlet property="rightImage" destination="diK-2C-5nb" id="FgD-VA-yXA"/>
                         <segue destination="0lx-uE-3tf" kind="presentation" identifier="quizToResult" modalPresentationStyle="overFullScreen" id="KXd-tX-p1w"/>
                     </connections>
                 </viewController>
@@ -492,17 +554,7 @@
             <point key="canvasLocation" x="1973" y="88"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="3CV-c4-Ga9">
-            <size key="intrinsicContentSize" width="170.66666666666666" height="294"/>
-        </designable>
-        <designable name="ID6-i9-Gnh">
-            <size key="intrinsicContentSize" width="171.66666666666666" height="294"/>
-        </designable>
-    </designables>
     <resources>
-        <image name="Dost" width="170.66667175292969" height="170.66667175292969"/>
-        <image name="Plato" width="170.66667175292969" height="170.66667175292969"/>
         <image name="StartIcon" width="170.66667175292969" height="170.66667175292969"/>
         <image name="Xav" width="212.33332824707031" height="141.66667175292969"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

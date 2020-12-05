@@ -14,8 +14,9 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
     
-    @IBOutlet weak var leftButton: LayoutableButton!
-    @IBOutlet weak var rightButton: LayoutableButton!
+    
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var checkButton: CheckButton!
     
     @IBOutlet weak var bottomView: UIView!
@@ -23,6 +24,10 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var bottomViewTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var quoteText: UILabel!
+    @IBOutlet weak var leftImage: UIImageView!
+    @IBOutlet weak var rightImage: UIImageView!
+    @IBOutlet weak var leftAuthor: UILabel!
+    @IBOutlet weak var rightAuthor: UILabel!
     
     override func viewDidLoad() {
         
@@ -105,9 +110,12 @@ class QuizViewController: UIViewController {
         let question = quizBrain.getQuestion()
         quoteText.text = question.quoteText
         leftButton.setTitle(question.author1Name, for: .normal)
-        leftButton.setImage(question.author1Face, for: .normal)
+        leftAuthor.text = question.author1Name
+        leftImage.image = question.author1Face
+
         rightButton.setTitle(question.author2Name, for: .normal)
-        rightButton.setImage(question.author2Face, for: .normal)
+        rightAuthor.text = question.author2Name
+        rightImage.image = question.author2Face
     }
     
     //MARK: - Author Button
