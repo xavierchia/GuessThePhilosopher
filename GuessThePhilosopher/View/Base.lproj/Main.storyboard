@@ -140,25 +140,26 @@
                                         <rect key="frame" x="0.0" y="262.33333333333326" width="374" height="371.66666666666674"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Koz-YY-99r">
-                                                <rect key="frame" x="0.0" y="96.999999999999986" width="182" height="177.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="91.999999999999986" width="182" height="187.66666666666663"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zum-C4-qgr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="177.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="187.66666666666666"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oe1-hx-Q0I">
                                                                 <rect key="frame" x="8" y="8" width="166" height="128"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-OE-Cps">
-                                                                <rect key="frame" x="8" y="136.00000000000006" width="166" height="33.666666666666657"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albert Camus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dB3-OE-Cps">
+                                                                <rect key="frame" x="8" y="136.00000000000006" width="166" height="43.666666666666657"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" red="0.72156862749999995" green="0.94901960780000005" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-i9-Gnh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="177.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="187.66666666666666"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
@@ -208,6 +209,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" red="0.99116545919999999" green="0.88201493019999999" blue="0.82781404260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-is-gAG" userLabel="Right Button">
@@ -252,6 +254,11 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bgE-M2-uU6" firstAttribute="height" secondItem="Koz-YY-99r" secondAttribute="height" id="QFJ-bu-0pi"/>
+                                            <constraint firstItem="5uM-9x-mMV" firstAttribute="height" secondItem="dB3-OE-Cps" secondAttribute="height" id="cdQ-NS-K95"/>
+                                            <constraint firstItem="diK-2C-5nb" firstAttribute="height" secondItem="Oe1-hx-Q0I" secondAttribute="height" id="vrL-ux-pLG"/>
+                                        </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfL-qE-d8E">
                                         <rect key="frame" x="0.0" y="634" width="374" height="50"/>
