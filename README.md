@@ -12,3 +12,5 @@
 3. Storyboard and XCode
 
 Download [here](https://apps.apple.com/us/app/guess-the-philosopher/id1542283897)
+
+767 loc
