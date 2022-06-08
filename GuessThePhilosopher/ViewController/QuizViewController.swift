@@ -191,10 +191,10 @@ class QuizViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "quizToResult" {
             let destinationVC = segue.destination as! UINavigationController
-            let secondVC = destinationVC.viewControllers.first as! ResultViewController
-            secondVC.quizBrain.score = quizBrain.score
+            let resultVC = destinationVC.viewControllers.first as! ResultViewController
+            let resultViewModel = ResultViewModel(quizBrain: quizBrain)
+            resultVC.viewModel = resultViewModel
             quizBrain.score = 0
-            secondVC.firstVC = self
         }
     }
 

@@ -9,8 +9,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     let soundPlayer = SoundPlayer()
-    var quizBrain = QuizBrain()
-    var firstVC: QuizViewController?
+    var viewModel: ResultViewModel!
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
@@ -35,12 +34,17 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
                 
         soundPlayer.playSound(Sound.finish)
-        
-        scoreLabel.text = "\(Int(quizBrain.score)) / \(Int(quizBrain.totalQuestions))"
-        adviceLabel.text = quizBrain.result.advice
-        view.backgroundColor = quizBrain.result.color
-        
         resetAgainButton()
+
+        if let viewModel = viewModel {
+            setupView(viewModel: viewModel)
+        }
+    }
+    
+    func setupView(viewModel: ResultViewModel) {
+        scoreLabel.text = viewModel.scoreLabelText
+        adviceLabel.text = viewModel.resultType.advice
+        view.backgroundColor = viewModel.resultType.color
     }
     
     func resetAgainButton() {
