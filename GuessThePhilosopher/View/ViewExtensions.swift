@@ -1,7 +1,7 @@
 import UIKit
 
 // Borders and shadows
-extension UIView {
+extension UIButton {
     
     func authorDefaultStyling() {
         
