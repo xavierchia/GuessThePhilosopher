@@ -56,9 +56,9 @@ class QuizViewController: UIViewController {
         case .CHECK:
             quizBrain.state = QuizButtonText.CONTINUE
             if quizBrain.isCorrect(userAnswer: quizBrain.userAnswer) {
-                questionCorrect()
+                handleCorrectAnswer()
             } else {
-                questionWrong()
+                handleIncorrectAnswer()
             }
             
             authorButtonsEnabled(false)
@@ -76,13 +76,13 @@ class QuizViewController: UIViewController {
     }
     
     //MARK: - Question Correct, Wrong or Game Over
-    func questionCorrect() {
+    func handleCorrectAnswer() {
         correctResponseStyling()
         bottomViewLabel.text = quizBrain.praises.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
         soundPlayer.playSound(Sound.correct)
     }
     
-    func questionWrong () {
+    func handleIncorrectAnswer () {
         incorrectResponseStyling()
         bottomViewLabel.text = quizBrain.shames.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
         soundPlayer.playSound(Sound.wrong)
