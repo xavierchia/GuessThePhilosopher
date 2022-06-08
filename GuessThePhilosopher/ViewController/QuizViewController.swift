@@ -52,21 +52,19 @@ class QuizViewController: UIViewController {
         progressView.progress = Float(quizBrain.questionNum / quizBrain.totalQuestions)
         checkButton.frame.origin.y -= 5
 
-        if quizBrain.state == QuizButtonText.CHECK {
-            
+        switch quizBrain.state {
+        case .CHECK:
             quizBrain.state = QuizButtonText.CONTINUE
             if quizBrain.isCorrect(userAnswer: quizBrain.userAnswer) {
-
                 questionCorrect()
             } else {
-
                 questionWrong()
             }
             
             authorButtonsEnabled(false)
             raiseBottomView()
-        } else if quizBrain.state == QuizButtonText.CONTINUE {
             
+        case .CONTINUE:
             quizBrain.state = QuizButtonText.CHECK
             
             if quizBrain.isGameOver() {
