@@ -87,7 +87,6 @@ class QuizViewController: UIViewController {
     }
     
     func gameOver() {
-        quizBrain.questionNum = 0
         self.performSegue(withIdentifier: "quizToResult", sender: self)
     }
     
@@ -185,7 +184,8 @@ class QuizViewController: UIViewController {
             let resultViewModel = ResultViewModel(finalScore: quizBrain.score,
                                                   totalQuestion: quizBrain.totalQuestions)
             resultVC.viewModel = resultViewModel
-            quizBrain.score = 0
+            quizBrain.reset()
+            progressView.progress = Float(quizBrain.progress)
         }
     }
 

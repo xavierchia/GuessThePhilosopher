@@ -11,9 +11,9 @@ import UIKit
 struct QuizBrain {
     let totalQuestions = 5
     
-    var score = 0
-    var questionNum = 0
-    var correctAuthor = ""
+    private(set) var score = 0
+    private(set) var questionNum = 0
+    private(set) var correctAuthor = ""
     var userAnswer = ""
     
     var progress: Double {
@@ -48,6 +48,13 @@ struct QuizBrain {
         }
         
         return false
+    }
+    
+    mutating func reset() {
+        score = 0
+        questionNum = 0
+        correctAuthor = ""
+        userAnswer = ""
     }
     
     func isGameOver() -> Bool {
