@@ -7,10 +7,9 @@
 
 import UIKit
 
-
-
 class QuizViewController: UIViewController {
     var quizBrain = QuizBrain()
+    let quizViewModel = QuizViewModel()
     let soundPlayer = SoundPlayer()
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -78,13 +77,13 @@ class QuizViewController: UIViewController {
     //MARK: - Question Correct, Wrong or Game Over
     func handleCorrectAnswer() {
         correctResponseStyling()
-        bottomViewLabel.text = quizBrain.praises.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
+        bottomViewLabel.text = quizViewModel.getPositiveFeedback(quizBrain: quizBrain)
         soundPlayer.playSound(Sound.correct)
     }
     
     func handleIncorrectAnswer () {
         incorrectResponseStyling()
-        bottomViewLabel.text = quizBrain.shames.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
+        bottomViewLabel.text = quizViewModel.getNegativeFeedback(quizBrain: quizBrain)
         soundPlayer.playSound(Sound.wrong)
     }
     
