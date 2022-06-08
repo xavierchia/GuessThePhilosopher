@@ -9,10 +9,10 @@ import Foundation
 
 struct ResultViewModel {
     let scoreLabelText: String
-    let resultType: Category
+    let resultType: ResultType
     
-    init(quizBrain: QuizBrain) {
-        scoreLabelText = "\(Int(quizBrain.score)) / \(Int(quizBrain.totalQuestions))"
-        resultType = quizBrain.result
+    init(finalScore: Int, totalQuestion: Int) {
+        scoreLabelText = "\(finalScore) / \(totalQuestion))"
+        resultType = ResultType(score: finalScore, totalQuestions: totalQuestion)
     }
 }

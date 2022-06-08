@@ -192,7 +192,8 @@ class QuizViewController: UIViewController {
         if segue.identifier == "quizToResult" {
             let destinationVC = segue.destination as! UINavigationController
             let resultVC = destinationVC.viewControllers.first as! ResultViewController
-            let resultViewModel = ResultViewModel(quizBrain: quizBrain)
+            let resultViewModel = ResultViewModel(finalScore: quizBrain.score,
+                                                  totalQuestion: quizBrain.totalQuestions)
             resultVC.viewModel = resultViewModel
             quizBrain.score = 0
         }

@@ -9,21 +9,16 @@ import AVFoundation
 import UIKit
 
 struct QuizBrain {
-    let totalQuestions = 5.0
+    let totalQuestions = 5
     
     var state = QuizButtonText.CHECK
-    var score = 0.0
-    var questionNum = 0.0
+    var score = 0
+    var questionNum = 0
     var correctAuthor = ""
     var wrongAuthor = ""
     
     var userAnswer = ""
     
-    
-    var result: Category {
-        return Category(score: score, totalQuestions: totalQuestions)
-    }
-
     mutating func getQuestion() -> (author1Name: String, author1Face: UIImage, author2Name: String, author2Face: UIImage, quoteText: String) {
         questionNum += 1
         

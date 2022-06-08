@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  ResultType.swift
 //  GuessThePhilosopher
 //
 //  Created by xavier chia on 20/11/20.
@@ -7,9 +7,13 @@
 
 import UIKit
 
-struct Category {
+struct ResultType {
     let color: UIColor
     let advice: String
+    
+    init(score: Int, totalQuestions: Int) {
+        self.init(score: Double(score), totalQuestions: Double(totalQuestions))
+    }
     
     init(score: Double, totalQuestions: Double) {
         switch (score / totalQuestions) {
