@@ -21,12 +21,7 @@ struct QuizBrain {
     
     
     var result: Category {
-        switch (score / totalQuestions) {
-        case 0..<0.5: return Category(color: #colorLiteral(red: 1, green: 0.2941176471, blue: 0.2941176471, alpha: 1), advice: "Go read a book!")
-        case 0.5..<0.75: return Category(color: #colorLiteral(red: 0.1098039216, green: 0.6901960784, blue: 0.9647058824, alpha: 1), advice: "You barely made it...")
-        case 0.75..<0.9: return Category(color: #colorLiteral(red: 0.8078431373, green: 0.5098039216, blue: 1, alpha: 1), advice: "There's a brain in the house!")
-        default: return Category(color: #colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1), advice: "You are a philosopher king!")
-        }
+        return Category(score: score, totalQuestions: totalQuestions)
     }
 
     mutating func getQuestion() -> (author1Name: String, author1Face: UIImage, author2Name: String, author2Face: UIImage, quoteText: String) {
