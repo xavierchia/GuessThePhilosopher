@@ -9,7 +9,7 @@ import UIKit
 
 class QuizViewController: UIViewController {
     var quizBrain = QuizBrain()
-    let quizViewModel = QuizViewModel()
+    let viewModel = QuizViewModel()
     let soundPlayer = SoundPlayer()
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -51,7 +51,7 @@ class QuizViewController: UIViewController {
         progressView.progress = Float(quizBrain.progress)
         bottomCTA.frame.origin.y -= 5
 
-        switch quizViewModel.state {
+        switch viewModel.state {
         case .CHECK:
             if quizBrain.isCorrect(userAnswer: quizBrain.userAnswer) {
                 handleCorrectAnswer()
@@ -70,19 +70,19 @@ class QuizViewController: UIViewController {
             lowerBottomView()
         }
         
-        quizViewModel.toggleState()
+        viewModel.toggleState()
     }
     
     //MARK: - Question Correct, Wrong or Game Over
     func handleCorrectAnswer() {
         correctResponseStyling()
-        bottomViewLabel.text = quizViewModel.getPositiveFeedback(quizBrain: quizBrain)
+        bottomViewLabel.text = viewModel.getPositiveFeedback(quizBrain: quizBrain)
         soundPlayer.playSound(Sound.correct)
     }
     
     func handleIncorrectAnswer () {
         incorrectResponseStyling()
-        bottomViewLabel.text = quizViewModel.getNegativeFeedback(quizBrain: quizBrain)
+        bottomViewLabel.text = viewModel.getNegativeFeedback(quizBrain: quizBrain)
         soundPlayer.playSound(Sound.wrong)
     }
     
