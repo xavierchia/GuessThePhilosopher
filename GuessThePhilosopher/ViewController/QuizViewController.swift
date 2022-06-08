@@ -51,9 +51,8 @@ class QuizViewController: UIViewController {
         progressView.progress = Float(quizBrain.progress)
         bottomCTA.frame.origin.y -= 5
 
-        switch quizBrain.state {
+        switch quizViewModel.state {
         case .CHECK:
-            quizBrain.state = QuizButtonText.CONTINUE
             if quizBrain.isCorrect(userAnswer: quizBrain.userAnswer) {
                 handleCorrectAnswer()
             } else {
@@ -64,14 +63,14 @@ class QuizViewController: UIViewController {
             raiseBottomView()
             
         case .CONTINUE:
-            quizBrain.state = QuizButtonText.CHECK
-            
             if quizBrain.isGameOver() {
                 gameOver()
             }
             prepareStylingAndQuestion()
             lowerBottomView()
         }
+        
+        quizViewModel.toggleState()
     }
     
     //MARK: - Question Correct, Wrong or Game Over

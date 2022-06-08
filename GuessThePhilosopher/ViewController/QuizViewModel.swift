@@ -7,7 +7,18 @@
 
 import Foundation
 
-struct QuizViewModel {
+class QuizViewModel {
+    private(set) var state = QuizButtonText.CHECK
+
+    func toggleState() {
+        switch state {
+        case .CHECK:
+            self.state = .CONTINUE
+        case .CONTINUE:
+            self.state = .CHECK
+        }
+    }
+    
     func getPositiveFeedback(quizBrain: QuizBrain) -> String? {
         return quizBrain
             .praises

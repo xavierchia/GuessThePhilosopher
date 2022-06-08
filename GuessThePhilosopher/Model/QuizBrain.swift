@@ -11,7 +11,6 @@ import UIKit
 struct QuizBrain {
     let totalQuestions = 5
     
-    var state = QuizButtonText.CHECK
     var score = 0
     var questionNum = 0
     var correctAuthor = ""
