@@ -14,8 +14,6 @@ struct QuizBrain {
     var score = 0
     var questionNum = 0
     var correctAuthor = ""
-    var wrongAuthor = ""
-    
     var userAnswer = ""
     
     var progress: Double {
@@ -38,7 +36,6 @@ struct QuizBrain {
         
         let quoteText = quotesShuffled[zeroOrOne].quoteTexts.randomElement() ?? ""
         correctAuthor = zeroOrOne == 0 ? author1Name : author2Name
-        wrongAuthor = zeroOrOne == 0 ? author2Name : author1Name
         
         return (author1Name, author1Face, author2Name, author2Face, quoteText)
     }
