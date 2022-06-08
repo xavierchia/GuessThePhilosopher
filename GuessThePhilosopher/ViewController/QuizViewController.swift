@@ -126,14 +126,9 @@ class QuizViewController: UIViewController {
         rightButton.authorDefaultStyling()
     }
     
-    func authorButtonsEnabled(_ isTrue: Bool) {
-        if isTrue {
-            leftButton.isUserInteractionEnabled = true
-            rightButton.isUserInteractionEnabled = true
-        } else {
-            leftButton.isUserInteractionEnabled = false
-            rightButton.isUserInteractionEnabled = false
-        } 
+    func authorButtonsEnabled(_ enabled: Bool) {
+        leftButton.isUserInteractionEnabled = enabled
+        rightButton.isUserInteractionEnabled = enabled
     }
     
     //MARK: - Responses
