@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1500363B2850D40D00ACCA1A /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500363A2850D40D00ACCA1A /* SoundPlayer.swift */; };
 		95216EC125635AE100990CD1 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95216EC025635AE100990CD1 /* QuizBrain.swift */; };
 		95216EC425637D3300990CD1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 95216EC325637D3300990CD1 /* README.md */; };
 		95294B31255D59C90007F007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95294B30255D59C90007F007 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1500363A2850D40D00ACCA1A /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		95216EC025635AE100990CD1 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		95216EC325637D3300990CD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		95294B2D255D59C90007F007 /* GuessThePhilosopher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessThePhilosopher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 				95CB553B25649A0A00A2664B /* Quote.swift */,
 				95CB55382564966800A2664B /* Enums.swift */,
 				95B783AA2567B31E00B8EE2B /* Category.swift */,
+				1500363A2850D40D00ACCA1A /* SoundPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				95294B35255D59C90007F007 /* StartViewController.swift in Sources */,
 				95B783AB2567B31E00B8EE2B /* Category.swift in Sources */,
+				1500363B2850D40D00ACCA1A /* SoundPlayer.swift in Sources */,
 				95216EC125635AE100990CD1 /* QuizBrain.swift in Sources */,
 				952A0D71255E896400AE432A /* ViewExtensions.swift in Sources */,
 				95294B31255D59C90007F007 /* AppDelegate.swift in Sources */,

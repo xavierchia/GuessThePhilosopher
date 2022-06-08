@@ -11,7 +11,7 @@ import UIKit
 
 class QuizViewController: UIViewController {
     var quizBrain = QuizBrain()
-    
+    let soundPlayer = SoundPlayer()
     @IBOutlet weak var progressView: UIProgressView!
     
     
@@ -33,7 +33,7 @@ class QuizViewController: UIViewController {
         
         super.viewDidLoad()
         
-        quizBrain.playSound(Sound.start)
+        soundPlayer.playSound(Sound.start)
         progressView.transform = CGAffineTransform(scaleX: 1, y: 3)
         prepareStylingAndQuestion()
     }
@@ -81,13 +81,13 @@ class QuizViewController: UIViewController {
     func questionCorrect() {
         correctResponseStyling()
         bottomViewLabel.text = quizBrain.praises.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
-        quizBrain.playSound(Sound.correct)
+        soundPlayer.playSound(Sound.correct)
     }
     
     func questionWrong () {
         incorrectResponseStyling()
         bottomViewLabel.text = quizBrain.shames.randomElement()?.replacingOccurrences(of: "Author", with: quizBrain.correctAuthor)
-        quizBrain.playSound(Sound.wrong)
+        soundPlayer.playSound(Sound.wrong)
     }
     
     func gameOver() {

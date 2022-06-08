@@ -19,7 +19,6 @@ struct QuizBrain {
     
     var userAnswer = ""
     
-    var audioPlayer = AVAudioPlayer()
     
     var result: Category {
         switch (score / totalQuestions) {
@@ -29,28 +28,7 @@ struct QuizBrain {
         default: return Category(color: #colorLiteral(red: 0.3450980392, green: 0.8, blue: 0.007843137255, alpha: 1), advice: "You are a philosopher king!")
         }
     }
-    
-    mutating func playSound(_ sound: Sound) {
-        
-        var soundString: String
-        
-        switch sound {
-        case .finish:
-            soundString = ["ohMyGosh", "really", "wow"].randomElement()!
-        default: soundString = sound.rawValue
-        }
-                
-        let soundFile = Bundle.main.path(forResource: soundString, ofType: "wav")
-        let url = URL(fileURLWithPath: soundFile!)
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer.play()
-        } catch {
-            print("wrong sound error")
-        }
-    }
-    
-    
+
     mutating func getQuestion() -> (author1Name: String, author1Face: UIImage, author2Name: String, author2Face: UIImage, quoteText: String) {
         questionNum += 1
         

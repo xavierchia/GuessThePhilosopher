@@ -8,6 +8,7 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    let soundPlayer = SoundPlayer()
     var quizBrain = QuizBrain()
     var firstVC: QuizViewController?
     
@@ -22,7 +23,7 @@ class ResultViewController: UIViewController {
     @IBAction func againButtonTouchUp(_ sender: UIButton) {
         resetAgainButton()
         againButton.frame.origin.y -= 5
-        firstVC?.quizBrain.playSound(Sound.start)
+        soundPlayer.playSound(Sound.start)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -33,7 +34,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        quizBrain.playSound(Sound.finish)
+        soundPlayer.playSound(Sound.finish)
         
         scoreLabel.text = "\(Int(quizBrain.score)) / \(Int(quizBrain.totalQuestions))"
         adviceLabel.text = quizBrain.result.advice
