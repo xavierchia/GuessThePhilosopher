@@ -49,7 +49,7 @@ class QuizViewController: UIViewController {
     
     @IBAction func checkButtonTouchUp(_ sender: UIButton) {
 
-        progressView.progress = Float(quizBrain.questionNum / quizBrain.totalQuestions)
+        progressView.progress = Float(quizBrain.progress)
         checkButton.frame.origin.y -= 5
 
         switch quizBrain.state {
@@ -90,7 +90,6 @@ class QuizViewController: UIViewController {
     
     func gameOver() {
         quizBrain.questionNum = 0
-        progressView.progress = Float(quizBrain.questionNum / quizBrain.totalQuestions)
         self.performSegue(withIdentifier: "quizToResult", sender: self)
     }
     

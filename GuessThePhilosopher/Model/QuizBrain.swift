@@ -19,6 +19,10 @@ struct QuizBrain {
     
     var userAnswer = ""
     
+    var progress: Double {
+        return Double(questionNum) / Double(totalQuestions)
+    }
+    
     mutating func getQuestion() -> (author1Name: String, author1Face: UIImage, author2Name: String, author2Face: UIImage, quoteText: String) {
         questionNum += 1
         
