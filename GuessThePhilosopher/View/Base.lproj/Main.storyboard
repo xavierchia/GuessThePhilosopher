@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -27,20 +27,20 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNc-7d-gAz">
-                                <rect key="frame" x="0.0" y="667.33333333333337" width="414" height="228.66666666666663"/>
+                                <rect key="frame" x="0.0" y="674" width="414" height="222"/>
                                 <color key="backgroundColor" name="Dark"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EMy-tD-P1u">
-                                <rect key="frame" x="20" y="687.33333333333337" width="374" height="154.66666666666663"/>
+                                <rect key="frame" x="20" y="694" width="374" height="148"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match the quote  to the philosopher." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-X1-w7s" userLabel="Match the quote  to the philosopher.">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="81.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zS-7Y-Vxw" customClass="CheckButton" customModule="GuessThePhilosopher" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="101.66666666666663" width="374" height="53"/>
+                                        <rect key="frame" x="0.0" y="95" width="374" height="53"/>
                                         <color key="backgroundColor" red="0.34520369769999998" green="0.80096405739999998" blue="0.0066569880579999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="a0E-cq-Num"/>
@@ -100,7 +100,7 @@
                                 <rect key="frame" x="20" y="84" width="374" height="21"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGb-Fj-54w">
-                                        <rect key="frame" x="0.0" y="0.6666666666666714" width="22" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="21"/>
                                         <color key="tintColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
                                             <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
@@ -371,16 +371,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xcs-Pi-05I">
-                                <rect key="frame" x="140.33333333333337" y="386" width="133.66666666666663" height="124.33333333333331"/>
+                                <rect key="frame" x="140.33333333333331" y="387.66666666666669" width="133.33333333333331" height="120.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-rZ-3eh">
-                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="40.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="133.33333333333334" height="37"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 / 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDs-Sa-4zW">
-                                        <rect key="frame" x="0.0" y="40.666666666666693" width="133.66666666666666" height="83.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="37.000000000000007" width="133.33333333333334" height="83.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="70"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -429,7 +429,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPT-aX-8NP">
-                                <rect key="frame" x="369.66666666666669" y="88" width="24.333333333333314" height="23.666666666666671"/>
+                                <rect key="frame" x="372.66666666666669" y="88" width="21.333333333333314" height="21.333333333333329"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="semibold">
@@ -481,13 +481,13 @@
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Xav" translatesAutoresizingMaskIntoConstraints="NO" id="SxD-DD-4qi">
-                                        <rect key="frame" x="0.0" y="0.0" width="212.33333333333334" height="401"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="212.33333333333334" height="416"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-Rj-zbi">
-                                        <rect key="frame" x="0.0" y="401" width="354.33333333333331" height="288"/>
+                                        <rect key="frame" x="0.0" y="416" width="373" height="270"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="X5W-qw-J4x">
-                                                <rect key="frame" x="0.0" y="0.0" width="354.33333333333331" height="271.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="185"/>
                                                 <string key="text">Hi! 👋 I'm Xavier Chia. A freelance iOS developer from Singapore 🏝.   If you have any feedback, or would like to work together, drop me an email at xavier.cpy@gmail.com 🤓</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
@@ -496,7 +496,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-W8-Xoe">
-                                        <rect key="frame" x="0.0" y="689" width="50" height="85"/>
+                                        <rect key="frame" x="0.0" y="686" width="50" height="88"/>
                                         <state key="normal" title="Credits"/>
                                         <connections>
                                             <segue destination="rob-Ui-hJt" kind="show" id="DTT-oV-Twj"/>
@@ -551,10 +551,10 @@
             </objects>
             <point key="canvasLocation" x="4714" y="88"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="u2v-E2-hv0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0lx-uE-3tf" customClass="NavigationViewController" customModule="GuessThePhilosopher" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0lx-uE-3tf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ibo-wf-faR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
